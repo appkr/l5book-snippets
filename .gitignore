@@ -1,0 +1,10 @@
+# Book build output
+_book
+_reviewed
+_build
+build*
+
+# IDE & OS
+.idea
+.DS_Store
+Thumbs.db
