@@ -1,0 +1,1119 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>15장 예외 처리와 디버깅 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1016-email.html" />
+    
+    
+    <link rel="prev" href="1014-event.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    책 소개
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="0001-opening.html">
+            
+                <a href="0001-opening.html">
+            
+                    
+                    이 책에 대하여
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="0002-notice.html">
+            
+                <a href="0002-notice.html">
+            
+                    
+                    일러 두기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="0003-source-code.html">
+            
+                <a href="0003-source-code.html">
+            
+                    
+                    소스코드 활용
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="0004-laravel.html">
+            
+                <a href="0004-laravel.html">
+            
+                    
+                    라라벨은?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1000-introduction.html">
+            
+                <a href="1000-introduction.html">
+            
+                    
+                    1부 라라벨 입문
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1001-installation.html">
+            
+                <a href="1001-installation.html">
+            
+                    
+                    1장 라라벨 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="1002-configuration.html">
+            
+                <a href="1002-configuration.html">
+            
+                    
+                    2장 전역 환경 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="1003-routing.html">
+            
+                <a href="1003-routing.html">
+            
+                    
+                    3장 라우팅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="1004-view-data-binding.html">
+            
+                <a href="1004-view-data-binding.html">
+            
+                    
+                    4장 뷰 데이터 바인딩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="1005-blade.html">
+            
+                <a href="1005-blade.html">
+            
+                    
+                    5장 블레이드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="1006-database-model.html">
+            
+                <a href="1006-database-model.html">
+            
+                    
+                    6장 데이터베이스와 모델
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="1007-database-migrations.html">
+            
+                <a href="1007-database-migrations.html">
+            
+                    
+                    7장 데이터베이스 마이그레이션
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="1008-controller.html">
+            
+                <a href="1008-controller.html">
+            
+                    
+                    8장 컨트롤러
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="1009-authentication.html">
+            
+                <a href="1009-authentication.html">
+            
+                    
+                    9장 사용자 인증
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="1010-eloquent.html">
+            
+                <a href="1010-eloquent.html">
+            
+                    
+                    10장 엘로퀀트 ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="1011-seeding.html">
+            
+                <a href="1011-seeding.html">
+            
+                    
+                    11장 데이터베이스 시딩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="1012-eagerloading-pagination.html">
+            
+                <a href="1012-eagerloading-pagination.html">
+            
+                    
+                    12장 즉시로드와 페이징
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="1013-validation.html">
+            
+                <a href="1013-validation.html">
+            
+                    
+                    13장 입력값 유효성 검사
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="1014-event.html">
+            
+                <a href="1014-event.html">
+            
+                    
+                    14장 이벤트 시스템
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.15" data-path="1015-exception-debugging.html">
+            
+                <a href="1015-exception-debugging.html">
+            
+                    
+                    15장 예외 처리와 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="1016-email.html">
+            
+                <a href="1016-email.html">
+            
+                    
+                    16장 이메일 보내기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="1017-composer.html">
+            
+                <a href="1017-composer.html">
+            
+                    
+                    17장 컴포저
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2000-introduction.html">
+            
+                <a href="2000-introduction.html">
+            
+                    
+                    2부 실전 프로젝트 I - 마크다운 뷰어
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    18장 모델
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    19장 컨트롤러와 도우미 함수
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    20장 다듬질
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    21장 엘릭서와 프런트엔드
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3000-introduction.html">
+            
+                <a href="3000-introduction.html">
+            
+                    
+                    3부 실전 프로젝트 II - 포럼
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    22장 계획과 준비
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    23장 사용자 인증 재구성
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    24장 소셜 로그인
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    25장 아티클 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    26장 태그 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    27장 파일 첨부 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" >
+            
+                <span>
+            
+                    
+                    28장 댓글 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" >
+            
+                <span>
+            
+                    
+                    29장 다듬질 I
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" >
+            
+                <span>
+            
+                    
+                    30장 다듬질 II
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4000-introduction.html">
+            
+                <a href="4000-introduction.html">
+            
+                    
+                    4부 실전 프로젝트 III - RESTful API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    31장 기본기 익히기
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    32장 구조 설계
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    33장 클라이언트 인증
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" >
+            
+                <span>
+            
+                    
+                    34장 데이터 트랜스폼
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" >
+            
+                <span>
+            
+                    
+                    35장 다듬질 I
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" >
+            
+                <span>
+            
+                    
+                    36장 다듬질 II
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="5000-introduction.html">
+            
+                <a href="5000-introduction.html">
+            
+                    
+                    5부 코드 배포
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    37장 서버 준비
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    38장 코드 배포
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="a0-setup.html">
+            
+                <a href="a0-setup.html">
+            
+                    
+                    부록 A 운영체제별 개발 환경 준비
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="a1-setup-mac.html">
+            
+                <a href="a1-setup-mac.html">
+            
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="a2-setup-ubuntu.html">
+            
+                <a href="a2-setup-ubuntu.html">
+            
+                    
+                    Ubuntu Desktop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="a3-setup-windows.html">
+            
+                <a href="a3-setup-windows.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="b0-php.html">
+            
+                <a href="b0-php.html">
+            
+                    
+                    부록 B 속성 PHP 프로그래밍 입문
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="c0-oop.html">
+            
+                <a href="c0-oop.html">
+            
+                    
+                    부록 C 속성 PHP 객체지향 프로그래밍 입문
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >15장 예외 처리와 디버깅</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="15&#xC7A5;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xC640;-&#xB514;&#xBC84;&#xAE45;">15&#xC7A5; &#xC608;&#xC678; &#xCC98;&#xB9AC;&#xC640; &#xB514;&#xBC84;&#xAE45;</h2>
+<h3 id="151-&#xC804;&#xC5ED;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xAE30;">15.1. &#xC804;&#xC5ED; &#xC608;&#xC678; &#xCC98;&#xB9AC;&#xAE30;</h3>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-1 app/Http/Controllers/ArticlesController.php</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span><span class="hljs-params">($id)</span>
+</span>{
+    <span class="hljs-keyword">echo</span> $foo;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">&apos;&#xC740;(&#xB294;) &#xB2E4;&#xC74C; &#xAE30;&#xBCF8;&#xD0A4;&#xB97C; &#xAC00;&#xC9C4; Article &#xBAA8;&#xB378;&#xC744; &#xC870;&#xD68C;&#xD569;&#xB2C8;&#xB2E4;.:&apos;</span> . $id;
+}
+</code></pre>
+<p><img src="images/15-1.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 15-1 &#xB77C;&#xB77C;&#xBCA8;&#xC758; &#xC5ED;&#xCD94;&#xC801; &#xB85C;&#xADF8;</p>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-2 app/Exceptions/Handler.php</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Handler</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ExceptionHandler</span>
+</span>{
+    <span class="hljs-keyword">protected</span> $dontReport = [...];
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">report</span><span class="hljs-params">(Exception $e)</span>
+    </span>{
+        <span class="hljs-keyword">parent</span>::report($e);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span><span class="hljs-params">($request, Exception $e)</span>
+    </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">parent</span>::render($request, $e);
+    }
+}
+</code></pre>
+<h3 id="152-&#xC2E4;&#xC6A9;&#xC801;&#xC778;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;">15.2. &#xC2E4;&#xC6A9;&#xC801;&#xC778; &#xC608;&#xC678; &#xCC98;&#xB9AC;</h3>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-3 app/Http/Controllers/ArticlesController.php</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span><span class="hljs-params">($id)</span>
+</span>{
+    $article = \App\Article::findOrFail($id);
+
+    <span class="hljs-keyword">return</span> $article-&gt;toArray();
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-4 app/Exceptions/Handler.php</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span><span class="hljs-params">($request, Exception $e)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (app()-&gt;environment(<span class="hljs-string">&apos;production&apos;</span>)) {
+        <span class="hljs-keyword">if</span> ($e <span class="hljs-keyword">instanceof</span> \Illuminate\Database\Eloquent\ModelNotFoundException) {
+            <span class="hljs-keyword">return</span> response(view(<span class="hljs-string">&apos;errors.notice&apos;</span>, [
+                <span class="hljs-string">&apos;title&apos;</span>       =&gt; <span class="hljs-string">&apos;&#xCC3E;&#xC744; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&apos;</span>,
+                <span class="hljs-string">&apos;description&apos;</span> =&gt; <span class="hljs-string">&apos;&#xC8C4;&#xC1A1;&#xD569;&#xB2C8;&#xB2E4;! &#xC694;&#xCCAD;&#xD558;&#xC2E0; &#xD398;&#xC774;&#xC9C0;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&apos;</span>
+            ]), <span class="hljs-number">404</span>);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">parent</span>::render($request, $e);
+}
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- // &#xCF54;&#xB4DC; 15-5 resources/views/errors/notice.blade.php --&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>{{ $title }}<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1, user-scalable=no&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    * { <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>; <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>; }
+    <span class="hljs-selector-tag">html</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#888</span>; <span class="hljs-attribute">font-family</span>: sans-serif; <span class="hljs-attribute">text-align</span>: center; }
+    <span class="hljs-selector-tag">body</span> { <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>; <span class="hljs-attribute">margin</span>: -<span class="hljs-number">43px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> -<span class="hljs-number">150px</span>; <span class="hljs-attribute">position</span>: absolute; <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>; <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>; }
+    <span class="hljs-selector-tag">h1</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#555</span>; <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>; <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>; }
+    <span class="hljs-selector-tag">p</span> { <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>; }
+    @<span class="hljs-keyword">media</span> only screen and (max-width: <span class="hljs-number">400px</span>) {
+      <span class="hljs-selector-tag">body</span> { <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span> auto; <span class="hljs-attribute">position</span>: static; <span class="hljs-attribute">width</span>: <span class="hljs-number">95%</span>; }
+      <span class="hljs-selector-tag">h1</span> { <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5em</span>; }
+    }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{{ $title }}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ $description }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 15-5 .env</span>
+
+APP_ENV=production
+</code></pre>
+<p><img src="images/15-2.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 15-2 &#xC6B4;&#xC601; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xBCF4;&#xAC8C; &#xB420; &#xC624;&#xB958; &#xBA54;&#xC2DC;&#xC9C0;</p>
+<h3 id="153-&#xB514;&#xBC84;&#xAE45;">15.3. &#xB514;&#xBC84;&#xAE45;</h3>
+<h4 id="1531-&#xBC84;&#xADF8;&#xB780;">15.3.1. &#xBC84;&#xADF8;&#xB780;?</h4>
+<h3 id="154-&#xB514;&#xBC84;&#xAE45;-&#xBC29;&#xBC95;">15.4. &#xB514;&#xBC84;&#xAE45; &#xBC29;&#xBC95;</h3>
+<h4 id="1541-dd-&#xB3C4;&#xC6B0;&#xBBF8;-&#xD568;&#xC218;">15.4.1. dd() &#xB3C4;&#xC6B0;&#xBBF8; &#xD568;&#xC218;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-6 app/Http/Controllers/ArticlesController.php</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span><span class="hljs-params">($id)</span>
+</span>{
+    $article = \App\Article::findOrFail($id);
+    dd($article);
+    <span class="hljs-keyword">return</span> $article-&gt;toArray();
+}
+</code></pre>
+<pre><code class="lang-sh"><span class="hljs-comment"># HTTP 15-1 dd() &#xB3C4;&#xC6B0;&#xBBF8; &#xD568;&#xC218;&#xC758; &#xBC18;&#xD658;&#xAC12;</span>
+
+GET /articles/1 HTTP/1.1
+Host: &#xD638;&#xC2A4;&#xD2B8;:&#xD3EC;&#xD2B8;
+
+<span class="hljs-comment"># Article {#183 &#x25BC;</span>
+<span class="hljs-comment">#   #fillable: array:2 [&#x25B6;]</span>
+<span class="hljs-comment">#   # ...</span>
+<span class="hljs-comment">#   #attributes: array:6 [&#x25B6;]</span>
+<span class="hljs-comment">#   # ...</span>
+<span class="hljs-comment"># }</span>
+</code></pre>
+<h4 id="1542-&#xBDF0;-&#xB514;&#xBC84;&#xAE45;">15.4.2. &#xBDF0; &#xB514;&#xBC84;&#xAE45;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-7 app/Http/Controllers/ArticlesController.php</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">index</span><span class="hljs-params">()</span>
+</span>{
+    $articles = \App\Article::latest()-&gt;paginate(<span class="hljs-number">3</span>);
+    dd(view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>))-&gt;render());
+    <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>));
+}
+</code></pre>
+<h4 id="1543-&#xCFFC;&#xB9AC;-&#xB514;&#xBC84;&#xAE45;">15.4.3. &#xCFFC;&#xB9AC; &#xB514;&#xBC84;&#xAE45;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 15-1 toSql()</span>
+
+$ php artisan tinker
+&gt;&gt;&gt; <span class="hljs-variable">$queryLoyalUsers</span> = App\User::<span class="hljs-built_in">where</span>(
+...   <span class="hljs-string">&apos;last_login&apos;</span>, <span class="hljs-string">&apos;&gt;&apos;</span>, Carbon\Carbon::now()-&gt;subMonth()
+... )-&gt;toSql();
+=&gt; <span class="hljs-string">&quot;select * from `users` where `last_login` &gt; ?&quot;</span>
+</code></pre>
+<h4 id="1544-&#xCF58;&#xC194;-&#xB514;&#xBC84;&#xAE45;">15.4.4. &#xCF58;&#xC194; &#xB514;&#xBC84;&#xAE45;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 15-2 &#xC544;&#xD2F0;&#xC98C; &#xC624;&#xB958;</span>
+
+$ php artisan migrate
+<span class="hljs-comment"># Fatal error: Call to undefined method Illuminate\Database\Schema\Blueprint::password()</span>
+</code></pre>
+<h4 id="1544-&#xC678;&#xBD80;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xC774;&#xC6A9;">15.4.4. &#xC678;&#xBD80; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC774;&#xC6A9;</h4>
+<h3 id="155-&#xB9C8;&#xCE58;&#xBA70;">15.5. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code>$ git commit -m &apos;&#xC608;&#xC678; &#xCC98;&#xB9AC;&#xC640; &#xB514;&#xBC84;&#xAE45;&apos;
+$ git tag 1015-exception-debugging
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1014-event.html" class="navigation navigation-prev " aria-label="Previous page: 14장 이벤트 시스템">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="1016-email.html" class="navigation navigation-next " aria-label="Next page: 16장 이메일 보내기">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"15장 예외 처리와 디버깅","level":"1.3.15","depth":2,"next":{"title":"16장 이메일 보내기","level":"1.3.16","depth":2,"path":"draft/1016-email.md","ref":"draft/1016-email.md","articles":[]},"previous":{"title":"14장 이벤트 시스템","level":"1.3.14","depth":2,"path":"draft/1014-event.md","ref":"draft/1014-event.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1015-exception-debugging.md","mtime":"2016-06-22T04:17:42.000Z","type":"markdown"},"gitbook":{"version":"3.0.2","time":"2016-06-22T04:58:31.555Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
