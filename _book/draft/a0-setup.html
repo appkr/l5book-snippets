@@ -1,0 +1,1006 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>부록 A 운영체제별 개발 환경 준비 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="a1-setup-mac.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    책 소개
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="0001-opening.html">
+            
+                <a href="0001-opening.html">
+            
+                    
+                    이 책에 대하여
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="0002-notice.html">
+            
+                <a href="0002-notice.html">
+            
+                    
+                    일러 두기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="0003-source-code.html">
+            
+                <a href="0003-source-code.html">
+            
+                    
+                    소스코드 활용
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="0004-laravel.html">
+            
+                <a href="0004-laravel.html">
+            
+                    
+                    라라벨은?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1000-introduction.html">
+            
+                <a href="1000-introduction.html">
+            
+                    
+                    1부 라라벨 입문
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1001-installation.html">
+            
+                <a href="1001-installation.html">
+            
+                    
+                    1장 라라벨 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="1002-configuration.html">
+            
+                <a href="1002-configuration.html">
+            
+                    
+                    2장 전역 환경 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="1003-routing.html">
+            
+                <a href="1003-routing.html">
+            
+                    
+                    3장 라우팅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="1004-view-data-binding.html">
+            
+                <a href="1004-view-data-binding.html">
+            
+                    
+                    4장 뷰 데이터 바인딩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="1005-blade.html">
+            
+                <a href="1005-blade.html">
+            
+                    
+                    5장 블레이드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="1006-database-model.html">
+            
+                <a href="1006-database-model.html">
+            
+                    
+                    6장 데이터베이스와 모델
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="1007-database-migrations.html">
+            
+                <a href="1007-database-migrations.html">
+            
+                    
+                    7장 데이터베이스 마이그레이션
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="1008-controller.html">
+            
+                <a href="1008-controller.html">
+            
+                    
+                    8장 컨트롤러
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="1009-authentication.html">
+            
+                <a href="1009-authentication.html">
+            
+                    
+                    9장 사용자 인증
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="1010-eloquent.html">
+            
+                <a href="1010-eloquent.html">
+            
+                    
+                    10장 엘로퀀트 ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="1011-seeding.html">
+            
+                <a href="1011-seeding.html">
+            
+                    
+                    11장 데이터베이스 시딩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="1012-eagerloading-pagination.html">
+            
+                <a href="1012-eagerloading-pagination.html">
+            
+                    
+                    12장 즉시로드와 페이징
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="1013-validation.html">
+            
+                <a href="1013-validation.html">
+            
+                    
+                    13장 입력값 유효성 검사
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="1014-event.html">
+            
+                <a href="1014-event.html">
+            
+                    
+                    14장 이벤트 시스템
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="1015-exception-debugging.html">
+            
+                <a href="1015-exception-debugging.html">
+            
+                    
+                    15장 예외 처리와 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="1016-email.html">
+            
+                <a href="1016-email.html">
+            
+                    
+                    16장 이메일 보내기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="1017-composer.html">
+            
+                <a href="1017-composer.html">
+            
+                    
+                    17장 컴포저
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2000-introduction.html">
+            
+                <a href="2000-introduction.html">
+            
+                    
+                    2부 실전 프로젝트 I - 마크다운 뷰어
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    18장 모델
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    19장 컨트롤러와 도우미 함수
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    20장 다듬질
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    21장 엘릭서와 프런트엔드
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3000-introduction.html">
+            
+                <a href="3000-introduction.html">
+            
+                    
+                    3부 실전 프로젝트 II - 포럼
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    22장 계획과 준비
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    23장 사용자 인증 재구성
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    24장 소셜 로그인
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    25장 아티클 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    26장 태그 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    27장 파일 첨부 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" >
+            
+                <span>
+            
+                    
+                    28장 댓글 기능 구현
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" >
+            
+                <span>
+            
+                    
+                    29장 다듬질 I
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" >
+            
+                <span>
+            
+                    
+                    30장 다듬질 II
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4000-introduction.html">
+            
+                <a href="4000-introduction.html">
+            
+                    
+                    4부 실전 프로젝트 III - RESTful API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    31장 기본기 익히기
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    32장 구조 설계
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    33장 클라이언트 인증
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" >
+            
+                <span>
+            
+                    
+                    34장 데이터 트랜스폼
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" >
+            
+                <span>
+            
+                    
+                    35장 다듬질 I
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" >
+            
+                <span>
+            
+                    
+                    36장 다듬질 II
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="5000-introduction.html">
+            
+                <a href="5000-introduction.html">
+            
+                    
+                    5부 코드 배포
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    37장 서버 준비
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    38장 코드 배포
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="a0-setup.html">
+            
+                <a href="a0-setup.html">
+            
+                    
+                    부록 A 운영체제별 개발 환경 준비
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="a1-setup-mac.html">
+            
+                <a href="a1-setup-mac.html">
+            
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="a2-setup-ubuntu.html">
+            
+                <a href="a2-setup-ubuntu.html">
+            
+                    
+                    Ubuntu Desktop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="a3-setup-windows.html">
+            
+                <a href="a3-setup-windows.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="b0-php.html">
+            
+                <a href="b0-php.html">
+            
+                    
+                    부록 B 속성 PHP 프로그래밍 입문
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="c0-oop.html">
+            
+                <a href="c0-oop.html">
+            
+                    
+                    부록 C 속성 PHP 객체지향 프로그래밍 입문
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >부록 A 운영체제별 개발 환경 준비</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xBD80;&#xB85D;-a-&#xC6B4;&#xC601;&#xCCB4;&#xC81C;&#xBCC4;-&#xAC1C;&#xBC1C;-&#xD658;&#xACBD;-&#xC900;&#xBE44;">&#xBD80;&#xB85D; A &#xC6B4;&#xC601;&#xCCB4;&#xC81C;&#xBCC4; &#xAC1C;&#xBC1C; &#xD658;&#xACBD; &#xC900;&#xBE44;</h1>
+<p>&#xBD80;&#xB85D; A&#xC5D0;&#xC11C;&#xB294; &#xB2E4;&#xC74C; &#xB0B4;&#xC6A9;&#xC744; &#xBC30;&#xC6B4;&#xB2E4;. </p>
+<ul>
+<li>&#xC6F9; &#xAC1C;&#xBC1C;&#xC744; &#xD558;&#xB294; &#xB370; &#xD544;&#xC694;&#xD55C; PHP, MySQL&#xC744; &#xB85C;&#xCEEC; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xC124;&#xCE58;&#xD558;&#xACE0; &#xAD6C;&#xB3D9;&#xD558;&#xB294; &#xBC29;&#xBC95;</li>
+<li>&#xAC1C;&#xBC1C;&#xC744; &#xC880; &#xB354; &#xD3B8;&#xB9AC;&#xD558;&#xAC8C; &#xD558;&#xAE30; &#xC704;&#xD55C; &#xB3C4;&#xAD6C;&#xB4E4;&#xC758; &#xC124;&#xCE58;&#xBC95;</li>
+</ul>
+<p>&#xC55E;&#xC73C;&#xB85C; &#xC124;&#xBA85;&#xD560; &#xB0B4;&#xC6A9;&#xC740; Mac OS X El Capitan, Ubuntu Desktop 14.04, Windows 10 &#xC6B4;&#xC601;&#xCCB4;&#xC81C;&#xC5D0;&#xC11C; &#xAC80;&#xC99D;&#xD558;&#xC600;&#xB2E4;.</p>
+<p>&#xC11C;&#xB450;&#xC5D0; &#xB9D0;&#xD55C; &#xB300;&#xB85C; &#xC774; &#xCC45;&#xC758; &#xC9C0;&#xD5A5;&#xC810;&#xC740; &#xD480; &#xC2A4;&#xD0DD;&#xACFC; &#xB370;&#xBE0C;&#xC635;&#xC2A4;&#xB2E4;. &#xCF54;&#xB4DC;&#xAC00; &#xB3D9;&#xC791;&#xD558;&#xB294; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xC774;&#xD574;&#xD558;&#xBA74; &#xB354; &#xB098;&#xC740; &#xCF54;&#xB4DC;&#xB97C; &#xC9DC;&#xB294;&#xB370; &#xB3C4;&#xC6C0;&#xC774;&#xB41C;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; &#xB77C;&#xB77C;&#xBCA8; &#xD648;&#xC2A4;&#xD14C;&#xB4DC;<sup><a href="#fn_1" id="reffn_1">1</a></sup>&#xB294; &#xC774;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xAC1C;&#xBC1C;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB3C4;&#xAD6C;&#xB97C; &#xB85C;&#xCEEC; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xC9C1;&#xC811; &#xC124;&#xCE58;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xC124;&#xBA85;&#xD55C;&#xB2E4;. &#xD648;&#xC2A4;&#xD14C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD560; &#xB3C5;&#xC790;&#xB294; &#xB77C;&#xB77C;&#xBCA8; &#xACF5;&#xC2DD; &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xAE30; &#xBC14;&#xB780;&#xB2E4;.</p>
+<p>&#xAC1C;&#xBC1C; &#xD658;&#xACBD;&#xC744; &#xC900;&#xBE44;&#xD558;&#xB294; &#xACFC;&#xC815;&#xC740; &#xAE4C;&#xB2E4;&#xB86D;&#xC9C0;&#xB9CC; &#xC774; &#xCC45;&#xB300;&#xB85C; &#xD558;&#xBA74; 100% &#xC131;&#xACF5;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xACE0; &#xBCF4;&#xC7A5;&#xD55C;&#xB2E4;. &#xC774;&#xBBF8; &#xC0AC;&#xC6A9;&#xD558;&#xB358; &#xAC1C;&#xBC1C; &#xD658;&#xACBD;&#xC774; &#xB77C;&#xB77C;&#xBCA8; &#xAC1C;&#xBC1C;&#xC5D0; &#xC801;&#xD569;&#xD558;&#xBA74; &#xADF8;&#xB300;&#xB85C; &#xC0AC;&#xC6A9;&#xD574;&#xB3C4; &#xBB34;&#xBC29;&#xD558;&#xB2E4;. </p>
+<p>&#xB77C;&#xB77C;&#xBCA8;&#xC774; &#xC694;&#xAD6C;&#xD558;&#xB294; PHP &#xBC84;&#xC804;&#xC740; &#xC5C4;&#xACA9;&#xD558;&#xB2E4;. &#xC774; &#xCC45;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xB77C;&#xB77C;&#xBCA8; 5.2.x &#xBC84;&#xC804;&#xC740; PHP 5.5.9&#xC5D0;&#xC11C; &#xB3D9;&#xC791;&#xD55C;&#xB2E4;. &#xACE7; &#xB098;&#xC62C; &#xB77C;&#xB77C;&#xBCA8; 5.3&#xC5D0;&#xC11C;&#xB294; PHP 5.6 &#xC774;&#xC0C1;&#xC744; &#xC694;&#xAD6C;&#xD55C;&#xB2E4;. PHP 5.5 &#xBC84;&#xC804;&#xC740; 2016&#xB144; 6&#xC6D4; 10&#xC77C;&#xC5D0; &#xBB18;&#xBE44;&#xBA85;&#xC744; &#xC7A5;&#xC2DD;&#xD560; &#xC608;&#xC815;&#xC774;&#xB2E4;.<sup><a href="#fn_2" id="reffn_2">2</a></sup>) &#xC774; &#xB9D0;&#xC744; &#xB2E4;&#xC2DC; &#xD480;&#xC774;&#xD558;&#xBA74;, &#xAC1C;&#xBC1C;&#xD55C; &#xCF54;&#xB4DC;&#xB97C; &#xBC30;&#xD3EC;&#xD560; &#xC6B4;&#xC601; &#xC11C;&#xBC84;&#xB3C4; PHP 5.5.9 &#xC774;&#xC0C1;&#xC774; &#xD544;&#xC694;&#xD558;&#xB2E4;&#xB294; &#xC758;&#xBBF8;&#xB2E4;. &#xADF8; &#xC678;&#xC5D0;&#xB3C4; &#xBA87; &#xAC00;&#xC9C0; PHP &#xD655;&#xC7A5; &#xBAA8;&#xB4C8;&#xC774; &#xD544;&#xC694;&#xD558;&#xB2E4;.</p>
+<ul>
+<li>PHP 5.5.9 &#xC774;&#xC0C1;</li>
+<li><code>openssl</code> PHP &#xD655;&#xC7A5;&#xBAA8;&#xB4C8;_ &#xC554;&#xBCF5;&#xD638;&#xD654;, &#xD574;&#xC2DC;&#xB97C; &#xC704;&#xD574; &#xD544;&#xC694;&#xD55C; &#xBAA8;&#xB4C8;</li>
+<li><code>pdo</code> PHP &#xD655;&#xC7A5;&#xBAA8;&#xB4C8;_ PHP&#xC640; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB97C; &#xC5F0;&#xACB0;&#xD558;&#xB294; &#xBAA8;&#xB4C8;</li>
+<li><code>mbstring</code> PHP &#xD655;&#xC7A5;&#xBAA8;&#xB4C8;_ &#xBA40;&#xD2F0;&#xBC14;&#xC774;&#xD2B8; &#xBB38;&#xC790;&#xC5F4; &#xCC98;&#xB9AC;&#xB97C; &#xC704;&#xD55C; &#xBAA8;&#xB4C8;</li>
+<li><code>tokenizer</code> PHP &#xD655;&#xC7A5;&#xBAA8;&#xB4C8;_ PHP &#xD30C;&#xC11C;, &#xC544;&#xD2F0;&#xC98C; &#xCF58;&#xC194; &#xB4F1;&#xC758; &#xB3D9;&#xC791;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xBAA8;&#xB4C8;</li>
+</ul>
+<h2 id="a1-&#xCF54;&#xB4DC;-&#xC5D0;&#xB514;&#xD130;-&#xC900;&#xBE44;">A.1. &#xCF54;&#xB4DC; &#xC5D0;&#xB514;&#xD130; &#xC900;&#xBE44;</h2>
+<p>&#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC774;&#xB780; &#xC77C;&#xC744; &#xD6A8;&#xC728;&#xC801;&#xC73C;&#xB85C; &#xD558;&#xB824;&#xBA74; &#xCF54;&#xB4DC; &#xC5D0;&#xB514;&#xD130;&#xB77C; &#xBD80;&#xB974;&#xB294; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xAC00; &#xD544;&#xC694;&#xD558;&#xB2E4;. &#xC544;&#xB798;&#xB294; &#xB77C;&#xB77C;&#xBCA8; &#xAC1C;&#xBC1C;&#xC790;&#xB4E4;&#xC774; &#xAC00;&#xC7A5; &#xB9CE;&#xC774; &#xC4F0;&#xB294; &#xCF54;&#xB4DC; &#xC5D0;&#xB514;&#xD130;&#xC774;&#xB2E4;.</p>
+<ul>
+<li>phpStorm<sup><a href="#fn_3" id="reffn_3">3</a></sup></li>
+<li>SublimeText<sup><a href="#fn_4" id="reffn_4">4</a></sup></li>
+</ul>
+<blockquote id="fn_1">
+<sup>1</sup>. &#xB77C;&#xB77C;&#xBCA8; &#xD648;&#xC2A4;&#xD14C;&#xB4DC;_ &#xB77C;&#xB77C;&#xBCA8;&#xB85C; &#xC6F9; &#xAC1C;&#xBC1C;&#xC744; &#xC704;&#xD574; &#xD544;&#xC694;&#xD55C; &#xBAA8;&#xB4E0; &#xB3C4;&#xAD6C;&#xAC00; &#xC900;&#xBE44;&#xB41C; Ubuntu &#xAC00;&#xC0C1; &#xBA38;&#xC2E0; &#xC774;&#xBBF8;&#xC9C0; &#xBC0F; &#xC774;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xB3C4;&#xAD6C;, <a href="https://laravel.com/docs/homestead" _target="blank">https://laravel.com/docs/homestead</a>, <a href="http://laravel.kr/docs/homestead" _target="blank">http://laravel.kr/docs/homestead</a><a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. PHP &#xBC84;&#xC804;&#xBCC4; &#xC9C0;&#xC6D0;_ <a href="http://php.net/supported-versions.php" _target="blank">http://php.net/supported-versions.php</a><a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. phpStorm_ <a href="http://www.jetbrains.com/phpstorm" _target="blank">http://www.jetbrains.com/phpstorm</a> &#xC5D0;&#xC11C; 30&#xC77C; &#xD3C9;&#xAC00;&#xD310;&#xC744; &#xB0B4;&#xB824; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xB2E4;. PHP &#xC804;&#xC6A9;&#xC73C;&#xB85C; &#xAC1C;&#xBC1C;&#xB41C; &#xD1B5;&#xD569;&#xAC1C;&#xBC1C; &#xD658;&#xACBD;(IDE)&#xC774;&#xB2E4;.<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_4">
+<sup>4</sup>. SublimeText_ <a href="http://www.sublimetext.com" _target="blank">http://www.sublimetext.com</a> &#xC5D0;&#xC11C; &#xBB34;&#xB8CC;&#xB85C; &#xB0B4;&#xB824; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xB2E4;. &#xB77C;&#xB77C;&#xBCA8; &#xAC1C;&#xBC1C;&#xACFC; &#xAD00;&#xB828;&#xB41C; Sublime &#xD655;&#xC7A5; &#xAE30;&#xB2A5; &#xC124;&#xCE58;&#xB294; &#xB2E4;&#xC74C; &#xB9C1;&#xD06C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC790;. <a href="http://bit.ly/sublime-laravel" _target="blank">http://bit.ly/sublime-laravel</a><a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#x21A9;</a>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="a1-setup-mac.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Mac">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"부록 A 운영체제별 개발 환경 준비","level":"1.8","depth":1,"next":{"title":"Mac","level":"1.8.1","depth":2,"path":"draft/a1-setup-mac.md","ref":"draft/a1-setup-mac.md","articles":[]},"previous":{"title":"38장 코드 배포","level":"1.7.2","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/a0-setup.md","mtime":"2016-06-22T03:26:42.000Z","type":"markdown"},"gitbook":{"version":"3.0.2","time":"2016-06-22T04:58:31.555Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
