@@ -187,22 +187,22 @@ class Article extends Model
 
 $ php artisan tinker
 >>> App\Tag::create([
-... 'name' => 'Foo',
-... 'slug' => 'foo',
-... ]);
+'name' => 'Foo',
+'slug' => 'foo',
+]);
 
 >>> App\Tag::create([
-... 'name' => 'Bar',
-... 'slug' => 'bar',
-... ]);
+'name' => 'Bar',
+'slug' => 'bar',
+]);
 
 >>> App\Tag::all();
 # 출력 결과 생략
 
 >>> App\User::find(2)->articles()->create([
-... 'title' => 'Second article',
-... 'content' => 'Second content',
-... ]);
+'title' => 'Second article',
+'content' => 'Second content',
+]);
 
 >>> App\Article::all();
 # 출력 결과 생략

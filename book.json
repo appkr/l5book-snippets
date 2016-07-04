@@ -1,5 +1,15 @@
 {
   "pdf": {
     "fontSize": 10
+  },
+  "plugins": [
+    "anchors",
+    "richquotes",
+    "ga"
+  ],
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-80296339-1"
+    }
   }
 }

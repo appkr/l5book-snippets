@@ -49,10 +49,10 @@ mysql> use myapp;
 # Database changed
 
 mysql> CREATE TABLE posts(
-    -> id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    -> title VARCHAR(255),
-    -> body TEXT
-    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title VARCHAR(255),
+body TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 # Query OK, 0 rows affected (0.04 sec)
 
 mysql> describe posts;
@@ -230,10 +230,10 @@ mysql> use myapp;
 # Database changed
 
 mysql> CREATE TABLE authors(
-    -> id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    -> email VARCHAR(255) NOT NULL,
-    -> password VARCHAR(60) NOT NULL
-    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+email VARCHAR(255) NOT NULL,
+password VARCHAR(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 # Query OK, 0 rows affected (0.06 sec)
 
 mysql> show tables;
@@ -339,9 +339,9 @@ class Author extends Model
 # 콘솔 6-20 대량 할당
 
 >>> App\Author::create([
-... 'email' => 'bar@baz.com',
-... 'password' => bcrypt('password'),
-... ]);
+'email' => 'bar@baz.com',
+'password' => bcrypt('password'),
+]);
 # Illuminate\Database\Eloquent\MassAssignmentException with message 'email'
 ```
 
@@ -370,9 +370,9 @@ class Post extends Model
 ```sh
 # 콘솔 6-21 대량 할당 (재시도)
 >>> App\Author::create([
-... 'email' => 'bar@baz.com',
-... 'password' => bcrypt('password'),
-... ]);
+'email' => 'bar@baz.com',
+'password' => bcrypt('password'),
+]);
 # => App\Author {#628
 #      email: "bar@baz.com",
 #      password: "$2y$10$my12WdNz2pYx9Kcki4bnm.GOPIrpbq9K99Th42Vp9H/OzUuCJg.T2",

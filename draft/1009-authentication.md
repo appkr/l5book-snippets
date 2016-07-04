@@ -42,10 +42,10 @@ Schema::create('users', function (Blueprint $table) {
 # 콘솔 9-1 새로운 사용자 만들기
 
 >>> $user = App\User::create([
-... 'name' => 'John Doe',
-... 'email' => 'john@example.com',
-... 'password' => bcrypt('password')
-... ]);
+'name' => 'John Doe',
+'email' => 'john@example.com',
+'password' => bcrypt('password')
+]);
 # 출력 결과 생략
 ```
 

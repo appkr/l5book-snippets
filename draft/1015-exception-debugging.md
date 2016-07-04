@@ -159,8 +159,8 @@ public function index()
 
 $ php artisan tinker
 >>> $queryLoyalUsers = App\User::where(
-...   'last_login', '>', Carbon\Carbon::now()->subMonth()
-... )->toSql();
+    'last_login', '>', Carbon\Carbon::now()->subMonth()
+)->toSql();
 => "select * from `users` where `last_login` > ?"
 ```
 
