@@ -1,5 +1,6 @@
 # 목차
 
+- [오리엔테이션](draft/orientation.md)
 - 책 소개
     -   [이 책에 대하여](draft/0001-opening.md)
     -   [일러 두기](draft/0002-notice.md)
