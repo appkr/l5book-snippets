@@ -21,7 +21,7 @@ mysql> CREATE DATABASE myapp;
 mysql> CREATE USER 'homestead' IDENTIFIED BY 'secret';
 # Query OK, 0 rows affected (0.01 sec)
 
-mysql> GRANT ALTER, CREATE, INSERT, SELECT, DELETE, REFERENCES, UPDATE, DROP, EXECUTE, LOCK TABLES, INDEX ON myapp.* TO 'homestead';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'homestead' WITH GRANT OPTION;
 # Query OK, 0 rows affected (0.00 sec)
 
 mysql> FLUSH PRIVILEGES;
