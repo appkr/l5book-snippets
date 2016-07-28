@@ -21,7 +21,7 @@ mysql> CREATE DATABASE myapp;
 mysql> CREATE USER 'homestead' IDENTIFIED BY 'secret';
 # Query OK, 0 rows affected (0.01 sec)
 
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'homestead' WITH GRANT OPTION;
+mysql> GRANT ALL PRIVILEGES ON myapp.* TO 'homestead';
 # Query OK, 0 rows affected (0.00 sec)
 
 mysql> FLUSH PRIVILEGES;
@@ -30,7 +30,7 @@ mysql> FLUSH PRIVILEGES;
 mysql> quit
 # Bye
 
-$ 
+$
 ```
 
 ```sh
@@ -109,7 +109,7 @@ $ php artisan tinker
 #### 6.3.1. 데이터 삽입
 
 ```sh
-# 콘솔 6-8 팅커 콘솔에서 데이터베이스 레코드 삽입 
+# 콘솔 6-8 팅커 콘솔에서 데이터베이스 레코드 삽입
 
 >>> DB::insert('INSERT INTO posts(title, body) VALUES(?, ?)', ['Hello Database', 'Greetings from tinker']);
 # => true
@@ -188,7 +188,7 @@ $ php artisan tinker
 #      +"title": "Hello Database",
 #      +"body": "Greetings from tinker",
 #    }
-   
+
 >>> DB::table('posts')->find(2);
 # => {#628
 #      +"id": 2,
