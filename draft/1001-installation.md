@@ -17,7 +17,7 @@ $ composer create-project laravel/laravel myapp --prefer-dist --verbose
 
 $ cd myapp
 $ php artisan --version 
-# Laravel Framework version 5.2.29
+# Laravel Framework version 5.3.x
 # laravel/laravel의 버전이 아니고, laravel/framework의 버전이다.
 ```
 
