@@ -921,7 +921,7 @@ MAIL_DRIVER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_USERNAME={username}@gmail.com
 MAIL_PASSWORD={password}</code></pre>
-<p><img alt="" src="images/16-1.png"></p><p>&#xADF8;&#xB9BC; 16-1 &#xC9C0;&#xBA54;&#xC77C; &apos;&#xB85C;&#xADF8;&#xC778; &#xBC0F; &#xBCF4;&#xC548; &#xC124;&#xC815;&apos; &#xD398;&#xC774;&#xC9C0;</p><h4 id="1612-&#xBA54;&#xC77C;-&#xBA54;&#xC2DC;&#xC9C0;-&#xB9CC;&#xB4E4;&#xAE30;"><a name="1612-&#xBA54;&#xC77C;-&#xBA54;&#xC2DC;&#xC9C0;-&#xB9CC;&#xB4E4;&#xAE30;" class="plugin-anchor" href="#1612-&#xBA54;&#xC77C;-&#xBA54;&#xC2DC;&#xC9C0;-&#xB9CC;&#xB4E4;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>16.1.2. &#xBA54;&#xC77C; &#xBA54;&#xC2DC;&#xC9C0; &#xB9CC;&#xB4E4;&#xAE30;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 16-3 app/Http/routes.php</span>
+<p><img src="images/16-1.png"></p><p>&#xADF8;&#xB9BC; 16-1 &#xC9C0;&#xBA54;&#xC77C; &apos;&#xB85C;&#xADF8;&#xC778; &#xBC0F; &#xBCF4;&#xC548; &#xC124;&#xC815;&apos; &#xD398;&#xC774;&#xC9C0;</p><h4 id="1612-&#xBA54;&#xC77C;-&#xBA54;&#xC2DC;&#xC9C0;-&#xB9CC;&#xB4E4;&#xAE30;"><a name="1612-&#xBA54;&#xC77C;-&#xBA54;&#xC2DC;&#xC9C0;-&#xB9CC;&#xB4E4;&#xAE30;" class="plugin-anchor" href="#1612-&#xBA54;&#xC77C;-&#xBA54;&#xC2DC;&#xC9C0;-&#xB9CC;&#xB4E4;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>16.1.2. &#xBA54;&#xC77C; &#xBA54;&#xC2DC;&#xC9C0; &#xB9CC;&#xB4E4;&#xAE30;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 16-3 app/Http/routes.php</span>
 
 Route::get(<span class="hljs-string">&apos;mail&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
     $article = App\Article::with(<span class="hljs-string">&apos;user&apos;</span>)-&gt;find(<span class="hljs-number">1</span>);
@@ -954,12 +954,12 @@ Route::get(<span class="hljs-string">&apos;mail&apos;</span>, <span class="hljs-
 
 $ composer require <span class="hljs-string">&quot;guzzlehttp/guzzle:~5.3|~6.0&quot;</span>
 $ composer require <span class="hljs-string">&quot;symfony/psr-http-message-bridge:~0.2&quot;</span></code></pre>
-<p><img alt="" src="images/16-2.png"></p><p>&#xADF8;&#xB9BC; 16-2 &#xBA54;&#xC77C;&#xAC74; &#xAC00;&#xC785; &#xD655;&#xC778; &#xBA54;&#xC77C;</p><h4 id="1621-&#xBA54;&#xC77C;&#xAC74;-&#xB4DC;&#xB77C;&#xC774;&#xBC84;-&#xC124;&#xC815;"><a name="1621-&#xBA54;&#xC77C;&#xAC74;-&#xB4DC;&#xB77C;&#xC774;&#xBC84;-&#xC124;&#xC815;" class="plugin-anchor" href="#1621-&#xBA54;&#xC77C;&#xAC74;-&#xB4DC;&#xB77C;&#xC774;&#xBC84;-&#xC124;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>16.2.1. &#xBA54;&#xC77C;&#xAC74; &#xB4DC;&#xB77C;&#xC774;&#xBC84; &#xC124;&#xC815;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 16-5 .env</span>
+<p><img src="images/16-2.png"></p><p>&#xADF8;&#xB9BC; 16-2 &#xBA54;&#xC77C;&#xAC74; &#xAC00;&#xC785; &#xD655;&#xC778; &#xBA54;&#xC77C;</p><h4 id="1621-&#xBA54;&#xC77C;&#xAC74;-&#xB4DC;&#xB77C;&#xC774;&#xBC84;-&#xC124;&#xC815;"><a name="1621-&#xBA54;&#xC77C;&#xAC74;-&#xB4DC;&#xB77C;&#xC774;&#xBC84;-&#xC124;&#xC815;" class="plugin-anchor" href="#1621-&#xBA54;&#xC77C;&#xAC74;-&#xB4DC;&#xB77C;&#xC774;&#xBC84;-&#xC124;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>16.2.1. &#xBA54;&#xC77C;&#xAC74; &#xB4DC;&#xB77C;&#xC774;&#xBC84; &#xC124;&#xC815;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 16-5 .env</span>
 
 MAIL_DRIVER=mailgun
 MAILGUN_DOMAIN={sandbox_RANDOM_NUMBER}.mailgun.org
 MAILGUN_SECRET={key-RANDOM_NUMBER}</code></pre>
-<p><img alt="" src="images/16-3.png"></p><p>&#xADF8;&#xB9BC; 16-3 &#xBA54;&#xC77C;&#xAC74; &#xB4DC;&#xB77C;&#xC774;&#xBC84; &#xC124;&#xC815;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xAC12; &#xCDE8;&#xB4DD;</p><h4 id="1622-&#xD14C;&#xC2A4;&#xD2B8;"><a name="1622-&#xD14C;&#xC2A4;&#xD2B8;" class="plugin-anchor" href="#1622-&#xD14C;&#xC2A4;&#xD2B8;"><i class="fa fa-link" aria-hidden="true"></i></a>16.2.2. &#xD14C;&#xC2A4;&#xD2B8;</h4><pre><code class="lang-javascript"># HTTP 16-1 &#xBA54;&#xC77C;&#xAC74;&#xC758; &#xC751;&#xB2F5; 
+<p><img src="images/16-3.png"></p><p>&#xADF8;&#xB9BC; 16-3 &#xBA54;&#xC77C;&#xAC74; &#xB4DC;&#xB77C;&#xC774;&#xBC84; &#xC124;&#xC815;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xAC12; &#xCDE8;&#xB4DD;</p><h4 id="1622-&#xD14C;&#xC2A4;&#xD2B8;"><a name="1622-&#xD14C;&#xC2A4;&#xD2B8;" class="plugin-anchor" href="#1622-&#xD14C;&#xC2A4;&#xD2B8;"><i class="fa fa-link" aria-hidden="true"></i></a>16.2.2. &#xD14C;&#xC2A4;&#xD2B8;</h4><pre><code class="lang-javascript"># HTTP 16-1 &#xBA54;&#xC77C;&#xAC74;&#xC758; &#xC751;&#xB2F5; 
 
 {
   id: &quot;&lt;67f01637f5bcee622e34eeb8f4b829f8@localhost&gt;&quot;,
@@ -1007,7 +1007,7 @@ MAILGUN_SECRET={key-RANDOM_NUMBER}</code></pre>
     <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{ $message-&gt;embed(storage_path(&apos;elephant.png&apos;)) }}&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-<p><img alt="" src="images/16-4.png"></p><p>&#xADF8;&#xB9BC; 16-4 &#xC774;&#xBBF8;&#xC9C0;&#xAC00; &#xCD94;&#xAC00;&#xB41C; &#xC774;&#xBA54;&#xC77C; &#xBCF8;&#xBB38;</p><h3 id="164-&#xD14C;&#xC2A4;&#xD2B8;-&#xD658;&#xACBD;"><a name="164-&#xD14C;&#xC2A4;&#xD2B8;-&#xD658;&#xACBD;" class="plugin-anchor" href="#164-&#xD14C;&#xC2A4;&#xD2B8;-&#xD658;&#xACBD;"><i class="fa fa-link" aria-hidden="true"></i></a>16.4. &#xD14C;&#xC2A4;&#xD2B8; &#xD658;&#xACBD;</h3><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 16-10 config/mail.php</span>
+<p><img src="images/16-4.png"></p><p>&#xADF8;&#xB9BC; 16-4 &#xC774;&#xBBF8;&#xC9C0;&#xAC00; &#xCD94;&#xAC00;&#xB41C; &#xC774;&#xBA54;&#xC77C; &#xBCF8;&#xBB38;</p><h3 id="164-&#xD14C;&#xC2A4;&#xD2B8;-&#xD658;&#xACBD;"><a name="164-&#xD14C;&#xC2A4;&#xD2B8;-&#xD658;&#xACBD;" class="plugin-anchor" href="#164-&#xD14C;&#xC2A4;&#xD2B8;-&#xD658;&#xACBD;"><i class="fa fa-link" aria-hidden="true"></i></a>16.4. &#xD14C;&#xC2A4;&#xD2B8; &#xD658;&#xACBD;</h3><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 16-10 config/mail.php</span>
 
 <span class="hljs-keyword">return</span> [
     <span class="hljs-comment">// ...</span>
@@ -1062,7 +1062,7 @@ $ git tag 1016-email</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"16장 이메일 보내기","level":"1.4.16","depth":2,"next":{"title":"17장 컴포저","level":"1.4.17","depth":2,"path":"draft/1017-composer.md","ref":"draft/1017-composer.md","articles":[]},"previous":{"title":"15장 예외 처리와 디버깅","level":"1.4.15","depth":2,"path":"draft/1015-exception-debugging.md","ref":"draft/1015-exception-debugging.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1016-email.md","mtime":"2016-06-22T04:17:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-19T00:26:12.733Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"16장 이메일 보내기","level":"1.4.16","depth":2,"next":{"title":"17장 컴포저","level":"1.4.17","depth":2,"path":"draft/1017-composer.md","ref":"draft/1017-composer.md","articles":[]},"previous":{"title":"15장 예외 처리와 디버깅","level":"1.4.15","depth":2,"path":"draft/1015-exception-debugging.md","ref":"draft/1015-exception-debugging.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1016-email.md","mtime":"2016-06-22T04:17:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-19T02:17:07.014Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1073,6 +1073,10 @@ $ git tag 1016-email</code></pre>
     
         
         <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
