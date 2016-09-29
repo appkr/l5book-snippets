@@ -20,7 +20,7 @@ Wi-Fi에 접속하고 바로 이 문서를 열어 보세요.
 
 ```sh
 $ php --version
-# PHP 5.5.9 이상
+# PHP 5.6.4 이상
 
 $ mysql --version
 # mysql로 시작하는 메시지가 출력되어야 함
