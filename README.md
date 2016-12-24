@@ -14,4 +14,4 @@ keywords:
 -   '책 소개'와 '부록'을 제외한 모든 본문은 삭제되었습니다.
 -   종이 책은 출간 이전입니다. 조판이 완료되었고 11월에 출간합니다. 출판사는 '제이펍'입니다.
 
-![](/draft/images/cover.png)
+![](http://cfile2.uf.tistory.com/image/261326505829771C18CBB0)

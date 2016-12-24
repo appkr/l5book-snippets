@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>4장 뷰 데이터 바인딩 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4장 뷰 데이터 바인딩 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,19 +912,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="4&#xC7A5;-&#xBDF0;&#xC640;-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><a name="4&#xC7A5;-&#xBDF0;&#xC640;-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;" class="plugin-anchor" href="#4&#xC7A5;-&#xBDF0;&#xC640;-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#xC7A5; &#xBDF0;&#xC640; &#xB370;&#xC774;&#xD130; &#xBC14;&#xC778;&#xB529;</h2><h3 id="41-&#xBDF0;-&#xBC18;&#xD658;"><a name="41-&#xBDF0;-&#xBC18;&#xD658;" class="plugin-anchor" href="#41-&#xBDF0;-&#xBC18;&#xD658;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#xBDF0; &#xBC18;&#xD658;</h3><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 4-1 app/Http/routes.php</span>
+                                <h2 id="4&#xC7A5;-&#xBDF0;&#xC640;-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><a name="4&#xC7A5;-&#xBDF0;&#xC640;-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;" class="plugin-anchor" href="#4&#xC7A5;-&#xBDF0;&#xC640;-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#xC7A5; &#xBDF0;&#xC640; &#xB370;&#xC774;&#xD130; &#xBC14;&#xC778;&#xB529;</h2>
+<h3 id="41-&#xBDF0;-&#xBC18;&#xD658;"><a name="41-&#xBDF0;-&#xBC18;&#xD658;" class="plugin-anchor" href="#41-&#xBDF0;-&#xBC18;&#xD658;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#xBDF0; &#xBC18;&#xD658;</h3>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 4-1 app/Http/routes.php</span>
 
 Route::get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;errors.503&apos;</span>);
-});</code></pre>
-<h3 id="42-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><a name="42-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;" class="plugin-anchor" href="#42-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#xB370;&#xC774;&#xD130; &#xBC14;&#xC778;&#xB529;</h3><h4 id="421-with-&#xBA54;&#xC11C;&#xB4DC;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><a name="421-with-&#xBA54;&#xC11C;&#xB4DC;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#421-with-&#xBA54;&#xC11C;&#xB4DC;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.1. with() &#xBA54;&#xC11C;&#xB4DC; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 4-2 app/Http/routes.php</span>
+});
+</code></pre>
+<h3 id="42-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><a name="42-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;" class="plugin-anchor" href="#42-&#xB370;&#xC774;&#xD130;-&#xBC14;&#xC778;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#xB370;&#xC774;&#xD130; &#xBC14;&#xC778;&#xB529;</h3>
+<h4 id="421-with-&#xBA54;&#xC11C;&#xB4DC;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><a name="421-with-&#xBA54;&#xC11C;&#xB4DC;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#421-with-&#xBA54;&#xC11C;&#xB4DC;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.1. with() &#xBA54;&#xC11C;&#xB4DC; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 4-2 app/Http/routes.php</span>
 
 Route::get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;welcome&apos;</span>)-&gt;with(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;Foo&apos;</span>);
-});</code></pre>
+});
+</code></pre>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- // &#xCF54;&#xB4DC; 4-3 resources/views/welcome.blade.php --&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello <span class="php"><span class="hljs-meta">&lt;?</span>= $name; <span class="hljs-meta">?&gt;</span></span> <span class="php"><span class="hljs-meta">&lt;?</span>= <span class="hljs-keyword">isset</span>($name) ? <span class="hljs-string">&quot;, {$name}?&quot;</span> : <span class="hljs-string">&apos;&apos;</span>; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello <span class="php"><span class="hljs-meta">&lt;?</span>= $name; <span class="hljs-meta">?&gt;</span></span> <span class="php"><span class="hljs-meta">&lt;?</span>= <span class="hljs-keyword">isset</span>($name) ? <span class="hljs-string">&quot;, {$name}?&quot;</span> : <span class="hljs-string">&apos;&apos;</span>; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 4-4 app/Http/routes.php</span>
 
 Route::get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
@@ -932,17 +939,22 @@ Route::get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-fun
         <span class="hljs-string">&apos;name&apos;</span> =&gt; <span class="hljs-string">&apos;Foo&apos;</span>,
         <span class="hljs-string">&apos;greeting&apos;</span> =&gt; <span class="hljs-string">&apos;&#xC548;&#xB155;&#xD558;&#xC138;&#xC694;?&apos;</span>,
     ]);
-});</code></pre>
-<h4 id="422-view-&#xD568;&#xC218;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><a name="422-view-&#xD568;&#xC218;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#422-view-&#xD568;&#xC218;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.2. view() &#xD568;&#xC218; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 4-5 app/Http/routes.php</span>
+});
+</code></pre>
+<h4 id="422-view-&#xD568;&#xC218;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><a name="422-view-&#xD568;&#xC218;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#422-view-&#xD568;&#xC218;-&#xC774;&#xC6A9;&#xD558;&#xB294;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.2. view() &#xD568;&#xC218; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 4-5 app/Http/routes.php</span>
 
 Route::get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;welcome&apos;</span>, [
         <span class="hljs-string">&apos;name&apos;</span> =&gt; <span class="hljs-string">&apos;Foo&apos;</span>,
         <span class="hljs-string">&apos;greeting&apos;</span> =&gt; <span class="hljs-string">&apos;&#xC548;&#xB155;&#xD558;&#xC138;&#xC694;?&apos;</span>,
     ]);
-});</code></pre>
-<h3 id="43-&#xB9C8;&#xCE58;&#xBA70;"><a name="43-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#43-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. &#xB9C8;&#xCE58;&#xBA70;</h3><pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xBDF0;&#xC640; &#xB370;&#xC774;&#xD130; &#xBC14;&#xC778;&#xB529;&apos;</span>
-$ git tag 1004-view-data-binding</code></pre>
+});
+</code></pre>
+<h3 id="43-&#xB9C8;&#xCE58;&#xBA70;"><a name="43-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#43-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xBDF0;&#xC640; &#xB370;&#xC774;&#xD130; &#xBC14;&#xC778;&#xB529;&apos;</span>
+$ git tag 1004-view-data-binding
+</code></pre>
 
                                 
                                 </section>
@@ -986,7 +998,7 @@ $ git tag 1004-view-data-binding</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4장 뷰 데이터 바인딩","level":"1.4.4","depth":2,"next":{"title":"5장 블레이드","level":"1.4.5","depth":2,"path":"draft/1005-blade.md","ref":"draft/1005-blade.md","articles":[]},"previous":{"title":"3장 라우팅","level":"1.4.3","depth":2,"path":"draft/1003-routing.md","ref":"draft/1003-routing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1004-view-data-binding.md","mtime":"2016-06-22T03:51:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4장 뷰 데이터 바인딩","level":"1.4.4","depth":2,"next":{"title":"5장 블레이드","level":"1.4.5","depth":2,"path":"draft/1005-blade.md","ref":"draft/1005-blade.md","articles":[]},"previous":{"title":"3장 라우팅","level":"1.4.3","depth":2,"path":"draft/1003-routing.md","ref":"draft/1003-routing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1004-view-data-binding.md","mtime":"2016-06-22T03:51:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

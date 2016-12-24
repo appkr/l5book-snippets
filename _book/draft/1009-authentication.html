@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>9장 사용자 인증 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9장 사용자 인증 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,7 +912,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="9&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><a name="9&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;" class="plugin-anchor" href="#9&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><i class="fa fa-link" aria-hidden="true"></i></a>9&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;</h2><h3 id="91-http&#xC758;-&#xBB34;&#xC0C1;&#xD0DC;-&#xD2B9;&#xC131;"><a name="91-http&#xC758;-&#xBB34;&#xC0C1;&#xD0DC;-&#xD2B9;&#xC131;" class="plugin-anchor" href="#91-http&#xC758;-&#xBB34;&#xC0C1;&#xD0DC;-&#xD2B9;&#xC131;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1. HTTP&#xC758; &#xBB34;&#xC0C1;&#xD0DC; &#xD2B9;&#xC131;</h3><p><img src="images/9-1.png"></p><p>&#xADF8;&#xB9BC; 9-1 &#xCFE0;&#xD0A4;&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xC138;&#xC158; &#xC720;&#xC9C0; &#xBA54;&#xCEE4;&#xB2C8;&#xC998;</p><h3 id="92-&#xAE30;&#xBCF8;&#xAE30;-&#xB2E4;&#xC9C0;&#xAE30;"><a name="92-&#xAE30;&#xBCF8;&#xAE30;-&#xB2E4;&#xC9C0;&#xAE30;" class="plugin-anchor" href="#92-&#xAE30;&#xBCF8;&#xAE30;-&#xB2E4;&#xC9C0;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2. &#xAE30;&#xBCF8;&#xAE30; &#xB2E4;&#xC9C0;&#xAE30;</h3><h4 id="921-user-&#xBAA8;&#xB378;"><a name="921-user-&#xBAA8;&#xB378;" class="plugin-anchor" href="#921-user-&#xBAA8;&#xB378;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.1. User &#xBAA8;&#xB378;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-1 app/User.php</span>
+                                <h2 id="9&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><a name="9&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;" class="plugin-anchor" href="#9&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><i class="fa fa-link" aria-hidden="true"></i></a>9&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;</h2>
+<h3 id="91-http&#xC758;-&#xBB34;&#xC0C1;&#xD0DC;-&#xD2B9;&#xC131;"><a name="91-http&#xC758;-&#xBB34;&#xC0C1;&#xD0DC;-&#xD2B9;&#xC131;" class="plugin-anchor" href="#91-http&#xC758;-&#xBB34;&#xC0C1;&#xD0DC;-&#xD2B9;&#xC131;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1. HTTP&#xC758; &#xBB34;&#xC0C1;&#xD0DC; &#xD2B9;&#xC131;</h3>
+<p><img src="images/9-1.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 9-1 &#xCFE0;&#xD0A4;&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xC138;&#xC158; &#xC720;&#xC9C0; &#xBA54;&#xCEE4;&#xB2C8;&#xC998;</p>
+<h3 id="92-&#xAE30;&#xBCF8;&#xAE30;-&#xB2E4;&#xC9C0;&#xAE30;"><a name="92-&#xAE30;&#xBCF8;&#xAE30;-&#xB2E4;&#xC9C0;&#xAE30;" class="plugin-anchor" href="#92-&#xAE30;&#xBCF8;&#xAE30;-&#xB2E4;&#xC9C0;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2. &#xAE30;&#xBCF8;&#xAE30; &#xB2E4;&#xC9C0;&#xAE30;</h3>
+<h4 id="921-user-&#xBAA8;&#xB378;"><a name="921-user-&#xBAA8;&#xB378;" class="plugin-anchor" href="#921-user-&#xBAA8;&#xB378;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.1. User &#xBAA8;&#xB378;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-1 app/User.php</span>
 
 <span class="hljs-keyword">protected</span> $fillable = [
     <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;email&apos;</span>, <span class="hljs-string">&apos;password&apos;</span>,
@@ -920,7 +926,8 @@
 
 <span class="hljs-keyword">protected</span> $hidden = [
     <span class="hljs-string">&apos;password&apos;</span>, <span class="hljs-string">&apos;remember_token&apos;</span>,
-];</code></pre>
+];
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-2 database/migrations/TIMESTAMP_create_users_table.php</span>
 
 Schema::create(<span class="hljs-string">&apos;users&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Blueprint $table)</span> </span>{
@@ -932,7 +939,8 @@ Schema::create(<span class="hljs-string">&apos;users&apos;</span>, <span class="
     $table-&gt;timestamps();
 });
 
-<span class="hljs-comment">// ...</span></code></pre>
+<span class="hljs-comment">// ...</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 9-1 &#xC0C8;&#xB85C;&#xC6B4; &#xC0AC;&#xC6A9;&#xC790; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 &gt;&gt;&gt; <span class="hljs-variable">$user</span> = App\User::create([
@@ -940,8 +948,10 @@ Schema::create(<span class="hljs-string">&apos;users&apos;</span>, <span class="
 <span class="hljs-string">&apos;email&apos;</span> =&gt; <span class="hljs-string">&apos;john@example.com&apos;</span>,
 <span class="hljs-string">&apos;password&apos;</span> =&gt; bcrypt(<span class="hljs-string">&apos;password&apos;</span>)
 ]);
-<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span></code></pre>
-<h4 id="922-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;-&#xAD6C;&#xD604;"><a name="922-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;-&#xAD6C;&#xD604;" class="plugin-anchor" href="#922-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;-&#xAD6C;&#xD604;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.2. &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D; &#xAD6C;&#xD604;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-3 app/Http/routes.php</span>
+<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span>
+</code></pre>
+<h4 id="922-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;-&#xAD6C;&#xD604;"><a name="922-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;-&#xAD6C;&#xD604;" class="plugin-anchor" href="#922-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;-&#xAD6C;&#xD604;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.2. &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D; &#xAD6C;&#xD604;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-3 app/Http/routes.php</span>
 
 Route::get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-string">&apos;WelcomeController@index&apos;</span>);
 
@@ -972,12 +982,17 @@ Route::get(<span class="hljs-string">&apos;auth/logout&apos;</span>, <span class
     auth()-&gt;logout();
 
     <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#xB610; &#xBD10;&#xC694;~&apos;</span>;
-});</code></pre>
-<p><img src="images/9-2.png"></p><p>&#xADF8;&#xB9BC; 9-2 &#xD06C;&#xB86C; &#xAC1C;&#xBC1C;&#xC790; &#xB3C4;&#xAD6C;&#xB85C; &#xBCF8; &#xCFE0;&#xD0A4; &#xB9E4;&#xCEE4;&#xB2C8;&#xC998;</p><h4 id="923-auth-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;"><a name="923-auth-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;" class="plugin-anchor" href="#923-auth-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.3. auth &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-4 app/Http/routes.php</span>
+});
+</code></pre>
+<p><img src="images/9-2.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 9-2 &#xD06C;&#xB86C; &#xAC1C;&#xBC1C;&#xC790; &#xB3C4;&#xAD6C;&#xB85C; &#xBCF8; &#xCFE0;&#xD0A4; &#xB9E4;&#xCEE4;&#xB2C8;&#xC998; </p>
+<h4 id="923-auth-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;"><a name="923-auth-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;" class="plugin-anchor" href="#923-auth-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.3. auth &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-4 app/Http/routes.php</span>
 
 Route::get(<span class="hljs-string">&apos;protected&apos;</span>, [<span class="hljs-string">&apos;middleware&apos;</span> =&gt; <span class="hljs-string">&apos;auth&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
     <span class="hljs-comment">// if &#xC808;&#xC740; &#xC0AD;&#xC81C;&#xD55C;&#xB2E4;.</span>
-}]);</code></pre>
+}]);
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-5 app/Http/Middleware/Authenticate.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Authenticate</span>
@@ -994,14 +1009,17 @@ Route::get(<span class="hljs-string">&apos;protected&apos;</span>, [<span class=
 
         <span class="hljs-keyword">return</span> $next($request);
     }
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-6 app/Http/Kernel.php</span>
 
 <span class="hljs-keyword">protected</span> $routeMiddleware = [
     <span class="hljs-string">&apos;auth&apos;</span> =&gt; \App\Http\Middleware\Authenticate::class,
     <span class="hljs-comment">// ...</span>
-];</code></pre>
-<h3 id="93-&#xB77C;&#xB77C;&#xBCA8;-&#xB0B4;&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><a name="93-&#xB77C;&#xB77C;&#xBCA8;-&#xB0B4;&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;" class="plugin-anchor" href="#93-&#xB77C;&#xB77C;&#xBCA8;-&#xB0B4;&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3. &#xB77C;&#xB77C;&#xBCA8; &#xB0B4;&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 9-2 &#xB77C;&#xB77C;&#xBCA8; &#xB0B4;&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D; &#xAE30;&#xB2A5; &#xCD08;&#xAE30;&#xD654;</span>
+];
+</code></pre>
+<h3 id="93-&#xB77C;&#xB77C;&#xBCA8;-&#xB0B4;&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><a name="93-&#xB77C;&#xB77C;&#xBCA8;-&#xB0B4;&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;" class="plugin-anchor" href="#93-&#xB77C;&#xB77C;&#xBCA8;-&#xB0B4;&#xC7A5;-&#xC0AC;&#xC6A9;&#xC790;-&#xC778;&#xC99D;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3. &#xB77C;&#xB77C;&#xBCA8; &#xB0B4;&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 9-2 &#xB77C;&#xB77C;&#xBCA8; &#xB0B4;&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D; &#xAE30;&#xB2A5; &#xCD08;&#xAE30;&#xD654;</span>
 
 $ php artisan make:auth
 <span class="hljs-comment"># Created View: resources/views/auth/login.blade.php</span>
@@ -1014,15 +1032,22 @@ $ php artisan make:auth
 <span class="hljs-comment"># Created View: resources/views/welcome.blade.php</span>
 <span class="hljs-comment"># Installed HomeController.</span>
 <span class="hljs-comment"># Updated Routes File.</span>
-<span class="hljs-comment"># Authentication scaffolding generated successfully!</span></code></pre>
-<p><img src="images/9-3.png"></p><p>&#xADF8;&#xB9BC; 9-3 &#xB77C;&#xB77C;&#xBCA8;&#xC5D0; &#xB0B4;&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xB4F1;&#xB85D; &#xD654;&#xBA74;</p><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 9-7 .env</span>
+<span class="hljs-comment"># Authentication scaffolding generated successfully!</span>
+</code></pre>
+<p><img src="images/9-3.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 9-3 &#xB77C;&#xB77C;&#xBCA8;&#xC5D0; &#xB0B4;&#xC7A5; &#xC0AC;&#xC6A9;&#xC790; &#xB4F1;&#xB85D; &#xD654;&#xBA74;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 9-7 .env</span>
 
-MAIL_DRIVER=<span class="hljs-built_in">log</span></code></pre>
+MAIL_DRIVER=<span class="hljs-built_in">log</span>
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 9-8 config/mail.php</span>
 
-<span class="hljs-string">&apos;from&apos;</span> =&gt; [<span class="hljs-string">&apos;address&apos;</span> =&gt; <span class="hljs-string">&apos;john@example.com&apos;</span>, <span class="hljs-string">&apos;name&apos;</span> =&gt; <span class="hljs-string">&apos;Admin&apos;</span>],</code></pre>
-<h3 id="94-&#xB9C8;&#xCE58;&#xBA70;"><a name="94-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#94-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4. &#xB9C8;&#xCE58;&#xBA70;</h3><pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;&apos;</span>
-$ git tag 1009-authentication</code></pre>
+<span class="hljs-string">&apos;from&apos;</span> =&gt; [<span class="hljs-string">&apos;address&apos;</span> =&gt; <span class="hljs-string">&apos;john@example.com&apos;</span>, <span class="hljs-string">&apos;name&apos;</span> =&gt; <span class="hljs-string">&apos;Admin&apos;</span>],
+</code></pre>
+<h3 id="94-&#xB9C8;&#xCE58;&#xBA70;"><a name="94-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#94-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;&apos;</span>
+$ git tag 1009-authentication
+</code></pre>
 
                                 
                                 </section>
@@ -1066,7 +1091,7 @@ $ git tag 1009-authentication</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9장 사용자 인증","level":"1.4.9","depth":2,"next":{"title":"10장 엘로퀀트 ORM","level":"1.4.10","depth":2,"path":"draft/1010-eloquent.md","ref":"draft/1010-eloquent.md","articles":[]},"previous":{"title":"8장 컨트롤러","level":"1.4.8","depth":2,"path":"draft/1008-controller.md","ref":"draft/1008-controller.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1009-authentication.md","mtime":"2016-07-04T13:06:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9장 사용자 인증","level":"1.4.9","depth":2,"next":{"title":"10장 엘로퀀트 ORM","level":"1.4.10","depth":2,"path":"draft/1010-eloquent.md","ref":"draft/1010-eloquent.md","articles":[]},"previous":{"title":"8장 컨트롤러","level":"1.4.8","depth":2,"path":"draft/1008-controller.md","ref":"draft/1008-controller.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1009-authentication.md","mtime":"2016-07-04T13:06:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

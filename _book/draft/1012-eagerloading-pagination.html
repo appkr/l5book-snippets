@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>12장 즉시로드와 페이징 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12장 즉시로드와 페이징 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,9 +912,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="12&#xC7A5;-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;&#xC640;-&#xD398;&#xC774;&#xC9D5;"><a name="12&#xC7A5;-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;&#xC640;-&#xD398;&#xC774;&#xC9D5;" class="plugin-anchor" href="#12&#xC7A5;-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;&#xC640;-&#xD398;&#xC774;&#xC9D5;"><i class="fa fa-link" aria-hidden="true"></i></a>12&#xC7A5; &#xC989;&#xC2DC; &#xB85C;&#xB4DC;&#xC640; &#xD398;&#xC774;&#xC9D5;</h2><h3 id="121-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;"><a name="121-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;" class="plugin-anchor" href="#121-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1. &#xC989;&#xC2DC; &#xB85C;&#xB4DC;</h3><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-1 app/Http/routes.php</span>
+                                <h2 id="12&#xC7A5;-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;&#xC640;-&#xD398;&#xC774;&#xC9D5;"><a name="12&#xC7A5;-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;&#xC640;-&#xD398;&#xC774;&#xC9D5;" class="plugin-anchor" href="#12&#xC7A5;-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;&#xC640;-&#xD398;&#xC774;&#xC9D5;"><i class="fa fa-link" aria-hidden="true"></i></a>12&#xC7A5; &#xC989;&#xC2DC; &#xB85C;&#xB4DC;&#xC640; &#xD398;&#xC774;&#xC9D5;</h2>
+<h3 id="121-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;"><a name="121-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;" class="plugin-anchor" href="#121-&#xC989;&#xC2DC;-&#xB85C;&#xB4DC;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1. &#xC989;&#xC2DC; &#xB85C;&#xB4DC;</h3>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-1 app/Http/routes.php</span>
 
-Route::resource(<span class="hljs-string">&apos;articles&apos;</span>, <span class="hljs-string">&apos;ArticlesController&apos;</span>);</code></pre>
+Route::resource(<span class="hljs-string">&apos;articles&apos;</span>, <span class="hljs-string">&apos;ArticlesController&apos;</span>);
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-2 app/Http/Controllers/ArticlesController.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArticlesController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
@@ -925,7 +928,8 @@ Route::resource(<span class="hljs-string">&apos;articles&apos;</span>, <span cla
 
         <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>));
     }
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- // &#xCF54;&#xB4DC; 12-3 resources/views/articles/index.blade.php --&gt;</span>
 
 @extends(&apos;layouts.app&apos;)
@@ -947,16 +951,24 @@ Route::resource(<span class="hljs-string">&apos;articles&apos;</span>, <span cla
       @endforelse
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-@stop</code></pre>
-<h4 id="1211-n1-&#xCFFC;&#xB9AC;-&#xBB38;&#xC81C;"><a name="1211-n1-&#xCFFC;&#xB9AC;-&#xBB38;&#xC81C;" class="plugin-anchor" href="#1211-n1-&#xCFFC;&#xB9AC;-&#xBB38;&#xC81C;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1. N+1 &#xCFFC;&#xB9AC; &#xBB38;&#xC81C;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-4 app/Http/routes.php</span>
+@stop
+</code></pre>
+<h4 id="1211-n1-&#xCFFC;&#xB9AC;-&#xBB38;&#xC81C;"><a name="1211-n1-&#xCFFC;&#xB9AC;-&#xBB38;&#xC81C;" class="plugin-anchor" href="#1211-n1-&#xCFFC;&#xB9AC;-&#xBB38;&#xC81C;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1. N+1 &#xCFFC;&#xB9AC; &#xBB38;&#xC81C;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-4 app/Http/routes.php</span>
 
 DB::listen(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($query)</span></span>{
     var_dump($query-&gt;sql);
-});</code></pre>
-<p><img src="images/12-1.png"></p><p>&#xADF8;&#xB9BC; 12-1 N+1 &#xBB38;&#xC81C;&#xC810;</p><h4 id="1212-&#xD574;&#xACB0;-&#xBC29;&#xBC95;"><a name="1212-&#xD574;&#xACB0;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#1212-&#xD574;&#xACB0;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.2. &#xD574;&#xACB0; &#xBC29;&#xBC95;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-5 app/Http/Controllers/ArticlesController.php</span>
+});
+</code></pre>
+<p><img src="images/12-1.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 12-1 N+1 &#xBB38;&#xC81C;&#xC810;</p>
+<h4 id="1212-&#xD574;&#xACB0;-&#xBC29;&#xBC95;"><a name="1212-&#xD574;&#xACB0;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#1212-&#xD574;&#xACB0;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.2. &#xD574;&#xACB0; &#xBC29;&#xBC95;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-5 app/Http/Controllers/ArticlesController.php</span>
 
-$articles = \App\Article::with(<span class="hljs-string">&apos;user&apos;</span>)-&gt;get();</code></pre>
-<h4 id="1213-&#xC9C0;&#xC5F0;-&#xB85C;&#xB4DC;"><a name="1213-&#xC9C0;&#xC5F0;-&#xB85C;&#xB4DC;" class="plugin-anchor" href="#1213-&#xC9C0;&#xC5F0;-&#xB85C;&#xB4DC;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.3. &#xC9C0;&#xC5F0; &#xB85C;&#xB4DC;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-6 app/Http/Controllers/ArticlesController.php</span>
+$articles = \App\Article::with(<span class="hljs-string">&apos;user&apos;</span>)-&gt;get();
+</code></pre>
+<h4 id="1213-&#xC9C0;&#xC5F0;-&#xB85C;&#xB4DC;"><a name="1213-&#xC9C0;&#xC5F0;-&#xB85C;&#xB4DC;" class="plugin-anchor" href="#1213-&#xC9C0;&#xC5F0;-&#xB85C;&#xB4DC;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.3. &#xC9C0;&#xC5F0; &#xB85C;&#xB4DC;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-6 app/Http/Controllers/ArticlesController.php</span>
 
 $articles = \App\Article::get();
 
@@ -964,12 +976,16 @@ $articles = \App\Article::get();
 
 $articles-&gt;load(<span class="hljs-string">&apos;user&apos;</span>);
 
-<span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>));</code></pre>
-<h3 id="122-&#xD398;&#xC774;&#xC9D5;"><a name="122-&#xD398;&#xC774;&#xC9D5;" class="plugin-anchor" href="#122-&#xD398;&#xC774;&#xC9D5;"><i class="fa fa-link" aria-hidden="true"></i></a>12.2. &#xD398;&#xC774;&#xC9D5;</h3><h4 id="1221-&#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;"><a name="1221-&#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;" class="plugin-anchor" href="#1221-&#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;"><i class="fa fa-link" aria-hidden="true"></i></a>12.2.1. &#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-7 app/Http/Controllers/ArticlesController.php</span>
+<span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>));
+</code></pre>
+<h3 id="122-&#xD398;&#xC774;&#xC9D5;"><a name="122-&#xD398;&#xC774;&#xC9D5;" class="plugin-anchor" href="#122-&#xD398;&#xC774;&#xC9D5;"><i class="fa fa-link" aria-hidden="true"></i></a>12.2. &#xD398;&#xC774;&#xC9D5;</h3>
+<h4 id="1221-&#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;"><a name="1221-&#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;" class="plugin-anchor" href="#1221-&#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;"><i class="fa fa-link" aria-hidden="true"></i></a>12.2.1. &#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 12-7 app/Http/Controllers/ArticlesController.php</span>
 
 $articles = \App\Article::latest()-&gt;paginate(<span class="hljs-number">3</span>);
 
-<span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>));</code></pre>
+<span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>));
+</code></pre>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- // &#xCF54;&#xB4DC; 12-8 resources/views/articles/index.blade.php --&gt;</span>
 
 @extends(&apos;layouts.app&apos;)
@@ -982,9 +998,14 @@ $articles = \App\Article::latest()-&gt;paginate(<span class="hljs-number">3</spa
       {!! $articles-&gt;render() !!}
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   @endif
-@stop</code></pre>
-<p><img src="images/12-2.png"></p><p>&#xADF8;&#xB9BC; 12-2 &#xD2B8;&#xC704;&#xD130; &#xBD80;&#xD2B8;&#xC2A4;&#xD2B8;&#xB7A9;&#xC774; &#xC801;&#xC6A9;&#xB41C; &#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;</p><h3 id="123-&#xB9C8;&#xCE58;&#xBA70;"><a name="123-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#123-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>12.3. &#xB9C8;&#xCE58;&#xBA70;</h3><pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xC989;&#xC2DC; &#xB85C;&#xB4DC;&#xC640; &#xD398;&#xC774;&#xC9D5;&apos;</span>
-$ git tag 1012-eagerloading-pagination</code></pre>
+@stop
+</code></pre>
+<p><img src="images/12-2.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 12-2 &#xD2B8;&#xC704;&#xD130; &#xBD80;&#xD2B8;&#xC2A4;&#xD2B8;&#xB7A9;&#xC774; &#xC801;&#xC6A9;&#xB41C; &#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xD130;</p>
+<h3 id="123-&#xB9C8;&#xCE58;&#xBA70;"><a name="123-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#123-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>12.3. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xC989;&#xC2DC; &#xB85C;&#xB4DC;&#xC640; &#xD398;&#xC774;&#xC9D5;&apos;</span>
+$ git tag 1012-eagerloading-pagination
+</code></pre>
 
                                 
                                 </section>
@@ -1028,7 +1049,7 @@ $ git tag 1012-eagerloading-pagination</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"12장 즉시로드와 페이징","level":"1.4.12","depth":2,"next":{"title":"13장 입력값 유효성 검사","level":"1.4.13","depth":2,"path":"draft/1013-validation.md","ref":"draft/1013-validation.md","articles":[]},"previous":{"title":"11장 데이터베이스 시딩","level":"1.4.11","depth":2,"path":"draft/1011-seeding.md","ref":"draft/1011-seeding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1012-eagerloading-pagination.md","mtime":"2016-06-22T04:17:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"12장 즉시로드와 페이징","level":"1.4.12","depth":2,"next":{"title":"13장 입력값 유효성 검사","level":"1.4.13","depth":2,"path":"draft/1013-validation.md","ref":"draft/1013-validation.md","articles":[]},"previous":{"title":"11장 데이터베이스 시딩","level":"1.4.11","depth":2,"path":"draft/1011-seeding.md","ref":"draft/1011-seeding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1012-eagerloading-pagination.md","mtime":"2016-06-22T04:17:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
