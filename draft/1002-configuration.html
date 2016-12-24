@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>2장 전역 환경 설정 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2장 전역 환경 설정 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,20 +912,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="2&#xC7A5;-&#xC804;&#xC5ED;-&#xD658;&#xACBD;-&#xC124;&#xC815;"><a name="2&#xC7A5;-&#xC804;&#xC5ED;-&#xD658;&#xACBD;-&#xC124;&#xC815;" class="plugin-anchor" href="#2&#xC7A5;-&#xC804;&#xC5ED;-&#xD658;&#xACBD;-&#xC124;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xC7A5; &#xC804;&#xC5ED; &#xD658;&#xACBD; &#xC124;&#xC815;</h2><h3 id="21-dotenv-&#xD30C;&#xC77C;&#xC774;-&#xD558;&#xB294;-&#xC77C;"><a name="21-dotenv-&#xD30C;&#xC77C;&#xC774;-&#xD558;&#xB294;-&#xC77C;" class="plugin-anchor" href="#21-dotenv-&#xD30C;&#xC77C;&#xC774;-&#xD558;&#xB294;-&#xC77C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. dotenv &#xD30C;&#xC77C;&#xC774; &#xD558;&#xB294; &#xC77C;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 2-1 .gitignore</span>
+                                <h2 id="2&#xC7A5;-&#xC804;&#xC5ED;-&#xD658;&#xACBD;-&#xC124;&#xC815;"><a name="2&#xC7A5;-&#xC804;&#xC5ED;-&#xD658;&#xACBD;-&#xC124;&#xC815;" class="plugin-anchor" href="#2&#xC7A5;-&#xC804;&#xC5ED;-&#xD658;&#xACBD;-&#xC124;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xC7A5; &#xC804;&#xC5ED; &#xD658;&#xACBD; &#xC124;&#xC815;</h2>
+<h3 id="21-dotenv-&#xD30C;&#xC77C;&#xC774;-&#xD558;&#xB294;-&#xC77C;"><a name="21-dotenv-&#xD30C;&#xC77C;&#xC774;-&#xD558;&#xB294;-&#xC77C;" class="plugin-anchor" href="#21-dotenv-&#xD30C;&#xC77C;&#xC774;-&#xD558;&#xB294;-&#xC77C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. dotenv &#xD30C;&#xC77C;&#xC774; &#xD558;&#xB294; &#xC77C;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 2-1 .gitignore</span>
 
 /vendor         <span class="hljs-comment"># &#xD0C0;&#xC0AC; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;</span>
 /node_modules   <span class="hljs-comment"># Node.js &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;</span>
 /public/storage <span class="hljs-comment"># &#xB77C;&#xB77C;&#xBCA8; &#xD30C;&#xC77C; &#xC800;&#xC7A5;&#xC18C; (&#xCE90;&#xC2DC;, &#xB85C;&#xADF8; &#xB4F1;)</span>
 <span class="hljs-comment"># ...</span>
-.env            <span class="hljs-comment"># &apos;&#xBBFC;&#xAC10;&#xD55C;&apos; &#xC804;&#xC5ED; &#xD658;&#xACBD; &#xBCC0;&#xC218;</span></code></pre>
+.env            <span class="hljs-comment"># &apos;&#xBBFC;&#xAC10;&#xD55C;&apos; &#xC804;&#xC5ED; &#xD658;&#xACBD; &#xBCC0;&#xC218;</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 2-2 .env</span>
 
 <span class="hljs-comment"># ...</span>
 DB_HOST=127.0.0.1       <span class="hljs-comment"># &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC11C;&#xBC84; &#xC8FC;&#xC18C;</span>
 DB_DATABASE=homestead   <span class="hljs-comment"># &#xC774; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xAC00; &#xC0AC;&#xC6A9;&#xD560; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC774;&#xB984;</span>
 DB_USERNAME=homestead   <span class="hljs-comment"># &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xC811;&#xC18D;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC0AC;&#xC6A9;&#xC790; &#xC774;&#xB984;</span>
-DB_PASSWORD=secret      <span class="hljs-comment"># &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBE44;&#xBC00;&#xBC88;&#xD638;</span></code></pre>
+DB_PASSWORD=secret      <span class="hljs-comment"># &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBE44;&#xBC00;&#xBC88;&#xD638;</span>
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 2-3 config/database.php</span>
 
 <span class="hljs-keyword">return</span> [
@@ -940,8 +944,11 @@ DB_PASSWORD=secret      <span class="hljs-comment"># &#xC0AC;&#xC6A9;&#xC790;&#x
             <span class="hljs-string">&apos;password&apos;</span>  =&gt; env(<span class="hljs-string">&apos;DB_PASSWORD&apos;</span>, <span class="hljs-string">&apos;&apos;</span>),
             <span class="hljs-comment">// ...</span>
         ],
-];</code></pre>
-<h3 id="22-app-&#xD658;&#xACBD;-&#xC124;&#xC815;"><a name="22-app-&#xD658;&#xACBD;-&#xC124;&#xC815;" class="plugin-anchor" href="#22-app-&#xD658;&#xACBD;-&#xC124;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. APP &#xD658;&#xACBD; &#xC124;&#xC815;</h3><h3 id="23-&#xB9C8;&#xCE58;&#xBA70;"><a name="23-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#23-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#xB9C8;&#xCE58;&#xBA70;</h3>
+];
+</code></pre>
+<h3 id="22-app-&#xD658;&#xACBD;-&#xC124;&#xC815;"><a name="22-app-&#xD658;&#xACBD;-&#xC124;&#xC815;" class="plugin-anchor" href="#22-app-&#xD658;&#xACBD;-&#xC124;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. APP &#xD658;&#xACBD; &#xC124;&#xC815;</h3>
+<h3 id="23-&#xB9C8;&#xCE58;&#xBA70;"><a name="23-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#23-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#xB9C8;&#xCE58;&#xBA70;</h3>
+
                                 
                                 </section>
                             
@@ -984,7 +991,7 @@ DB_PASSWORD=secret      <span class="hljs-comment"># &#xC0AC;&#xC6A9;&#xC790;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2장 전역 환경 설정","level":"1.4.2","depth":2,"next":{"title":"3장 라우팅","level":"1.4.3","depth":2,"path":"draft/1003-routing.md","ref":"draft/1003-routing.md","articles":[]},"previous":{"title":"1장 라라벨 설치","level":"1.4.1","depth":2,"path":"draft/1001-installation.md","ref":"draft/1001-installation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1002-configuration.md","mtime":"2016-06-22T03:51:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2장 전역 환경 설정","level":"1.4.2","depth":2,"next":{"title":"3장 라우팅","level":"1.4.3","depth":2,"path":"draft/1003-routing.md","ref":"draft/1003-routing.md","articles":[]},"previous":{"title":"1장 라라벨 설치","level":"1.4.1","depth":2,"path":"draft/1001-installation.md","ref":"draft/1001-installation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1002-configuration.md","mtime":"2016-06-22T03:51:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

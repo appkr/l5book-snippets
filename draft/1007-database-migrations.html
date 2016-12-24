@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>7장 데이터베이스 마이그레이션 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7장 데이터베이스 마이그레이션 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,7 +912,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="7&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;"><a name="7&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;" class="plugin-anchor" href="#7&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;"><i class="fa fa-link" aria-hidden="true"></i></a>7&#xC7A5; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;</h2><h3 id="71-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xB9CC;&#xB4E4;&#xAE30;"><a name="71-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xB9CC;&#xB4E4;&#xAE30;" class="plugin-anchor" href="#71-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xB9CC;&#xB4E4;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>7.1. &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xB9CC;&#xB4E4;&#xAE30;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-1 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC815;&#xB9AC;</span>
+                                <h2 id="7&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;"><a name="7&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;" class="plugin-anchor" href="#7&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;"><i class="fa fa-link" aria-hidden="true"></i></a>7&#xC7A5; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;</h2>
+<h3 id="71-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xB9CC;&#xB4E4;&#xAE30;"><a name="71-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xB9CC;&#xB4E4;&#xAE30;" class="plugin-anchor" href="#71-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xB9CC;&#xB4E4;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>7.1. &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xB9CC;&#xB4E4;&#xAE30;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-1 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC815;&#xB9AC;</span>
 
 $ mysql -uhomestead -p
 
@@ -929,13 +931,15 @@ mysql&gt; DROP TABLE authors;
 <span class="hljs-comment"># Query OK, 0 rows affected (0.01 sec)</span>
 
 mysql&gt; SET FOREIGN_KEY_CHECKS=1;
-<span class="hljs-comment"># Query OK, 0 rows affected (0.00 sec)</span></code></pre>
+<span class="hljs-comment"># Query OK, 0 rows affected (0.00 sec)</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-2 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xD074;&#xB798;&#xC2A4; &#xBF08;&#xB300; &#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 $ php artisan make:migration create_posts_table --create=posts
 <span class="hljs-comment"># Created Migration: TIMESTAMP_create_posts_table</span>
 $ php artisan make:migration create_authors_table --create=authors
-<span class="hljs-comment"># Created Migration: TIMESTAMP_create_authors_table</span></code></pre>
+<span class="hljs-comment"># Created Migration: TIMESTAMP_create_authors_table</span>
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 7-1 database/migrations/TIMESTAMP_create_posts_table.php</span>
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Schema</span>\<span class="hljs-title">Blueprint</span>;
@@ -957,7 +961,8 @@ $ php artisan make:migration create_authors_table --create=authors
     </span>{
         Schema::drop(<span class="hljs-string">&apos;posts&apos;</span>);
     }
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 7-2 database/migrations/TIMESTAMP_create_authors_table.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CreateAuthorsTable</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Migration</span>
@@ -976,15 +981,18 @@ $ php artisan make:migration create_authors_table --create=authors
     </span>{
         Schema::drop(<span class="hljs-string">&apos;authors&apos;</span>);
     }
-}</code></pre>
-<h3 id="72-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xC2E4;&#xD589;"><a name="72-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xC2E4;&#xD589;" class="plugin-anchor" href="#72-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xC2E4;&#xD589;"><i class="fa fa-link" aria-hidden="true"></i></a>7.2. &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC2E4;&#xD589;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-3 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC2E4;&#xD589;</span>
+}
+</code></pre>
+<h3 id="72-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xC2E4;&#xD589;"><a name="72-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xC2E4;&#xD589;" class="plugin-anchor" href="#72-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xC2E4;&#xD589;"><i class="fa fa-link" aria-hidden="true"></i></a>7.2. &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC2E4;&#xD589;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-3 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC2E4;&#xD589;</span>
 
 $ php artisan migrate
 <span class="hljs-comment"># Migration table created successfully.</span>
 <span class="hljs-comment"># Migrated: 2014_10_12_000000_create_users_table</span>
 <span class="hljs-comment"># Migrated: 2014_10_12_100000_create_password_resets_table</span>
 <span class="hljs-comment"># Migrated: TIMESTAMP_create_posts_table</span>
-<span class="hljs-comment"># Migrated: TIMESTAMP_create_authors_table</span></code></pre>
+<span class="hljs-comment"># Migrated: TIMESTAMP_create_authors_table</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-4 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC2E4;&#xD589; &#xACB0;&#xACFC; &#xD655;&#xC778;</span>
 
 $ mysql -uhomestead -p
@@ -1014,22 +1022,28 @@ mysql&gt; DESCRIBE authors;
 <span class="hljs-comment"># | created_at | timestamp        | YES  |     | NULL    |                |</span>
 <span class="hljs-comment"># | updated_at | timestamp        | YES  |     | NULL    |                |</span>
 <span class="hljs-comment"># +------------+------------------+------+-----+---------+----------------+</span>
-<span class="hljs-comment"># 5 rows in set (0.00 sec)</span></code></pre>
-<h3 id="73-&#xB864;&#xBC31;"><a name="73-&#xB864;&#xBC31;" class="plugin-anchor" href="#73-&#xB864;&#xBC31;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3. &#xB864;&#xBC31;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-5 &#xB864;&#xBC31;</span>
+<span class="hljs-comment"># 5 rows in set (0.00 sec)</span>
+</code></pre>
+<h3 id="73-&#xB864;&#xBC31;"><a name="73-&#xB864;&#xBC31;" class="plugin-anchor" href="#73-&#xB864;&#xBC31;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3. &#xB864;&#xBC31;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-5 &#xB864;&#xBC31;</span>
 
 $ php artisan migrate:rollback
 <span class="hljs-comment"># Rolled back: TIMESTAMP_create_authors_table</span>
 <span class="hljs-comment"># Rolled back: TIMESTAMP_create_posts_table</span>
 <span class="hljs-comment"># Rolled back: TIMESTAMP_create_password_resets_table</span>
-<span class="hljs-comment"># Rolled back: TIMESTAMP_create_users_table</span></code></pre>
+<span class="hljs-comment"># Rolled back: TIMESTAMP_create_users_table</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-6 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC7AC;&#xC2E4;&#xD589;</span>
 
 $ php artisan migrate
-<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span></code></pre>
-<h3 id="74-&#xC5F4;-&#xCD94;&#xAC00;"><a name="74-&#xC5F4;-&#xCD94;&#xAC00;" class="plugin-anchor" href="#74-&#xC5F4;-&#xCD94;&#xAC00;"><i class="fa fa-link" aria-hidden="true"></i></a>7.4. &#xC5F4; &#xCD94;&#xAC00;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-7 &#xD14C;&#xC774;&#xBE14; &#xC5F4; &#xCD94;&#xAC00; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xBF08;&#xB300; &#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30;</span>
+<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span>
+</code></pre>
+<h3 id="74-&#xC5F4;-&#xCD94;&#xAC00;"><a name="74-&#xC5F4;-&#xCD94;&#xAC00;" class="plugin-anchor" href="#74-&#xC5F4;-&#xCD94;&#xAC00;"><i class="fa fa-link" aria-hidden="true"></i></a>7.4. &#xC5F4; &#xCD94;&#xAC00;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-7 &#xD14C;&#xC774;&#xBE14; &#xC5F4; &#xCD94;&#xAC00; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xBF08;&#xB300; &#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 $ php artisan make:migration add_name_to_authors_table --table=authors
-<span class="hljs-comment"># Created Migration: TIMESTAMP_add_name_to_authors_table</span></code></pre>
+<span class="hljs-comment"># Created Migration: TIMESTAMP_add_name_to_authors_table</span>
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 7-3 database/migrations/TIMESTAMP_add_name_to_authors_table.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AddNameToAuthorsTable</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Migration</span>
@@ -1047,11 +1061,13 @@ $ php artisan make:migration add_name_to_authors_table --table=authors
             $table-&gt;dropColumn(<span class="hljs-string">&apos;name&apos;</span>);
         });
     }
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-8 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC2E4;&#xD589;</span>
 
 $ php artisan migrate
-<span class="hljs-comment"># Migrated: TIMESTAMP_add_name_to_authors_table</span></code></pre>
+<span class="hljs-comment"># Migrated: TIMESTAMP_add_name_to_authors_table</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-9 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC2E4;&#xD589; &#xACB0;&#xACFC; &#xD655;&#xC778;</span>
 
 $ mysql -uhomestead -p
@@ -1066,8 +1082,10 @@ mysql&gt; describe authors;
 <span class="hljs-comment"># ...</span>
 <span class="hljs-comment"># | name  | varchar(255) | YES  |     | NULL    |       |</span>
 <span class="hljs-comment"># +-------+--------------+------+-----+---------+-------+</span>
-6 rows <span class="hljs-keyword">in</span> <span class="hljs-built_in">set</span> (0.00 sec)</code></pre>
-<h3 id="75-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0C8;&#xB85C;&#xACE0;&#xCE68;"><a name="75-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0C8;&#xB85C;&#xACE0;&#xCE68;" class="plugin-anchor" href="#75-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0C8;&#xB85C;&#xACE0;&#xCE68;"><i class="fa fa-link" aria-hidden="true"></i></a>7.5. &#xCD08;&#xAE30;&#xD654; &#xBC0F; &#xC0C8;&#xB85C;&#xACE0;&#xCE68;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-10 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC0C8;&#xB85C;&#xACE0;&#xCE68;(refresh)</span>
+6 rows <span class="hljs-keyword">in</span> <span class="hljs-built_in">set</span> (0.00 sec)
+</code></pre>
+<h3 id="75-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0C8;&#xB85C;&#xACE0;&#xCE68;"><a name="75-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0C8;&#xB85C;&#xACE0;&#xCE68;" class="plugin-anchor" href="#75-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0C8;&#xB85C;&#xACE0;&#xCE68;"><i class="fa fa-link" aria-hidden="true"></i></a>7.5. &#xCD08;&#xAE30;&#xD654; &#xBC0F; &#xC0C8;&#xB85C;&#xACE0;&#xCE68;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 7-10 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xC0C8;&#xB85C;&#xACE0;&#xCE68;(refresh)</span>
 
 $ php artisan migrate:refresh
 <span class="hljs-comment"># Rolled back: TIMESTAMP_add_name_to_authors_table</span>
@@ -1075,9 +1093,12 @@ $ php artisan migrate:refresh
 <span class="hljs-comment"># Rolled back: TIMESTAMP_create_posts_table</span>
 <span class="hljs-comment"># Migrated: TIMESTAMP_create_posts_table</span>
 <span class="hljs-comment"># Migrated: TIMESTAMP_create_authors_table</span>
-<span class="hljs-comment"># Migrated: TIMESTAMP_add_name_to_authors_table</span></code></pre>
-<h3 id="76-&#xB9C8;&#xCE58;&#xBA70;"><a name="76-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#76-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>7.6. &#xB9C8;&#xCE58;&#xBA70;</h3><pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&apos;</span>
-$ git tag 1007-database-migrations</code></pre>
+<span class="hljs-comment"># Migrated: TIMESTAMP_add_name_to_authors_table</span>
+</code></pre>
+<h3 id="76-&#xB9C8;&#xCE58;&#xBA70;"><a name="76-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#76-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>7.6. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&apos;</span>
+$ git tag 1007-database-migrations
+</code></pre>
 
                                 
                                 </section>
@@ -1121,7 +1142,7 @@ $ git tag 1007-database-migrations</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7장 데이터베이스 마이그레이션","level":"1.4.7","depth":2,"next":{"title":"8장 컨트롤러","level":"1.4.8","depth":2,"path":"draft/1008-controller.md","ref":"draft/1008-controller.md","articles":[]},"previous":{"title":"6장 데이터베이스와 모델","level":"1.4.6","depth":2,"path":"draft/1006-database-model.md","ref":"draft/1006-database-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1007-database-migrations.md","mtime":"2016-06-22T04:17:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7장 데이터베이스 마이그레이션","level":"1.4.7","depth":2,"next":{"title":"8장 컨트롤러","level":"1.4.8","depth":2,"path":"draft/1008-controller.md","ref":"draft/1008-controller.md","articles":[]},"previous":{"title":"6장 데이터베이스와 모델","level":"1.4.6","depth":2,"path":"draft/1006-database-model.md","ref":"draft/1006-database-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1007-database-migrations.md","mtime":"2016-06-22T04:17:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

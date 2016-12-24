@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>11장 데이터베이스 시딩 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>11장 데이터베이스 시딩 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,10 +912,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="11&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC2DC;&#xB529;"><a name="11&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC2DC;&#xB529;" class="plugin-anchor" href="#11&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC2DC;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>11&#xC7A5; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC2DC;&#xB529;</h2><h3 id="111-&#xC2DC;&#xB354;-&#xB9CC;&#xB4E4;&#xAE30;"><a name="111-&#xC2DC;&#xB354;-&#xB9CC;&#xB4E4;&#xAE30;" class="plugin-anchor" href="#111-&#xC2DC;&#xB354;-&#xB9CC;&#xB4E4;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>11.1. &#xC2DC;&#xB354; &#xB9CC;&#xB4E4;&#xAE30;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-1 &#xC2DC;&#xB354; &#xD074;&#xB798;&#xC2A4; &#xBF08;&#xB300; &#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30; </span>
+                                <h2 id="11&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC2DC;&#xB529;"><a name="11&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC2DC;&#xB529;" class="plugin-anchor" href="#11&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC2DC;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>11&#xC7A5; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC2DC;&#xB529;</h2>
+<h3 id="111-&#xC2DC;&#xB354;-&#xB9CC;&#xB4E4;&#xAE30;"><a name="111-&#xC2DC;&#xB354;-&#xB9CC;&#xB4E4;&#xAE30;" class="plugin-anchor" href="#111-&#xC2DC;&#xB354;-&#xB9CC;&#xB4E4;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>11.1. &#xC2DC;&#xB354; &#xB9CC;&#xB4E4;&#xAE30;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-1 &#xC2DC;&#xB354; &#xD074;&#xB798;&#xC2A4; &#xBF08;&#xB300; &#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30; </span>
 
 $ php artisan make:seeder UsersTableSeeder
-<span class="hljs-comment"># Seeder created successfully.</span></code></pre>
+<span class="hljs-comment"># Seeder created successfully.</span>
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-1 database/seeds/UsersTableSeeder.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UsersTableSeeder</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Seeder</span>
@@ -928,11 +931,14 @@ $ php artisan make:seeder UsersTableSeeder
             <span class="hljs-string">&apos;password&apos;</span> =&gt; bcrypt(<span class="hljs-string">&apos;password&apos;</span>),
         ]);
     }
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-2 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC2DC;&#xB354; &#xC2E4;&#xD589; (&#xC2DC;&#xB529;)</span>
 
-$ php artisan db:seed --class=UsersTableSeeder</code></pre>
-<h3 id="112-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;"><a name="112-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;" class="plugin-anchor" href="#112-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2. &#xBAA8;&#xB378; &#xD329;&#xD130;&#xB9AC;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-3 &#xBAA8;&#xB378; &#xD329;&#xD130;&#xB9AC; &#xB9DB;&#xBCF4;&#xAE30;</span>
+$ php artisan db:seed --class=UsersTableSeeder
+</code></pre>
+<h3 id="112-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;"><a name="112-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;" class="plugin-anchor" href="#112-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2. &#xBAA8;&#xB378; &#xD329;&#xD130;&#xB9AC;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-3 &#xBAA8;&#xB378; &#xD329;&#xD130;&#xB9AC; &#xB9DB;&#xBCF4;&#xAE30;</span>
 
 $ php artisan tinker
 &gt;&gt;&gt; factory(App\User::class)-&gt;make();
@@ -944,8 +950,10 @@ $ php artisan tinker
 <span class="hljs-comment"># =&gt; App\User {#663</span>
 <span class="hljs-comment">#      name: &quot;Foo&quot;,</span>
 <span class="hljs-comment">#      email: &quot;Vivianne76@example.org&quot;,</span>
-<span class="hljs-comment">#    }</span></code></pre>
-<h4 id="1121-&#xC2DC;&#xB354;-&#xC218;&#xC815;"><a name="1121-&#xC2DC;&#xB354;-&#xC218;&#xC815;" class="plugin-anchor" href="#1121-&#xC2DC;&#xB354;-&#xC218;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2.1. &#xC2DC;&#xB354; &#xC218;&#xC815;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-2 database/seeds/UsersTableSeeder.php</span>
+<span class="hljs-comment">#    }</span>
+</code></pre>
+<h4 id="1121-&#xC2DC;&#xB354;-&#xC218;&#xC815;"><a name="1121-&#xC2DC;&#xB354;-&#xC218;&#xC815;" class="plugin-anchor" href="#1121-&#xC2DC;&#xB354;-&#xC218;&#xC815;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2.1. &#xC2DC;&#xB354; &#xC218;&#xC815;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-2 database/seeds/UsersTableSeeder.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UsersTableSeeder</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Seeder</span>
 </span>{
@@ -953,8 +961,10 @@ $ php artisan tinker
     </span>{
         factory(App\User::class, <span class="hljs-number">5</span>)-&gt;create();
     }
-}</code></pre>
-<h4 id="1122-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;-&#xCD94;&#xAC00;"><a name="1122-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;-&#xCD94;&#xAC00;" class="plugin-anchor" href="#1122-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;-&#xCD94;&#xAC00;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2.2. &#xBAA8;&#xB378; &#xD329;&#xD130;&#xB9AC; &#xCD94;&#xAC00;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-3 database/factories/ModelFactory.php</span>
+}
+</code></pre>
+<h4 id="1122-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;-&#xCD94;&#xAC00;"><a name="1122-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;-&#xCD94;&#xAC00;" class="plugin-anchor" href="#1122-&#xBAA8;&#xB378;-&#xD329;&#xD130;&#xB9AC;-&#xCD94;&#xAC00;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2.2. &#xBAA8;&#xB378; &#xD329;&#xD130;&#xB9AC; &#xCD94;&#xAC00;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-3 database/factories/ModelFactory.php</span>
 
 $factory-&gt;define(App\User::class, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Faker\Generator $faker)</span> </span>{
     <span class="hljs-keyword">return</span> [
@@ -963,7 +973,8 @@ $factory-&gt;define(App\User::class, <span class="hljs-function"><span class="hl
         <span class="hljs-string">&apos;password&apos;</span> =&gt; bcrypt(<span class="hljs-string">&apos;password&apos;</span>),
         <span class="hljs-string">&apos;remember_token&apos;</span> =&gt; str_random(<span class="hljs-number">10</span>),
     ];
-});</code></pre>
+});
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-4 database/factories/ModelFactory.php</span>
 
 $factory-&gt;define(App\Article::class, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Faker\Generator $faker)</span> </span>{
@@ -975,10 +986,12 @@ $factory-&gt;define(App\Article::class, <span class="hljs-function"><span class=
         <span class="hljs-string">&apos;created_at&apos;</span> =&gt; $date,
         <span class="hljs-string">&apos;updated_at&apos;</span> =&gt; $date,
     ];
-});</code></pre>
+});
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-4 articles &#xD14C;&#xC774;&#xBE14; &#xC2DC;&#xB354; &#xBF08;&#xB300; &#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
-$ php artisan make:seeder ArticlesTableSeeder</code></pre>
+$ php artisan make:seeder ArticlesTableSeeder
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-5 database/seeds/ArticlesTableSeeder.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArticlesTableSeeder</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Seeder</span>
@@ -993,8 +1006,10 @@ $ php artisan make:seeder ArticlesTableSeeder</code></pre>
             );
         });
     }
-}</code></pre>
-<h3 id="113-&#xB9C8;&#xC2A4;&#xD130;-&#xC2DC;&#xB354;"><a name="113-&#xB9C8;&#xC2A4;&#xD130;-&#xC2DC;&#xB354;" class="plugin-anchor" href="#113-&#xB9C8;&#xC2A4;&#xD130;-&#xC2DC;&#xB354;"><i class="fa fa-link" aria-hidden="true"></i></a>11.3. &#xB9C8;&#xC2A4;&#xD130; &#xC2DC;&#xB354;</h3><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-6 database/seeds/DatabaseSeeder.php</span>
+}
+</code></pre>
+<h3 id="113-&#xB9C8;&#xC2A4;&#xD130;-&#xC2DC;&#xB354;"><a name="113-&#xB9C8;&#xC2A4;&#xD130;-&#xC2DC;&#xB354;" class="plugin-anchor" href="#113-&#xB9C8;&#xC2A4;&#xD130;-&#xC2DC;&#xB354;"><i class="fa fa-link" aria-hidden="true"></i></a>11.3. &#xB9C8;&#xC2A4;&#xD130; &#xC2DC;&#xB354;</h3>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 11-6 database/seeds/DatabaseSeeder.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseSeeder</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Seeder</span>
 </span>{
@@ -1014,17 +1029,23 @@ $ php artisan make:seeder ArticlesTableSeeder</code></pre>
             DB::statement(<span class="hljs-string">&apos;SET FOREIGN_KEY_CHECKS=1&apos;</span>);
         }
     }
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-5 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC2DC;&#xB529;</span>
 
 $ php artisan db:seed
 <span class="hljs-comment"># Seeded: UsersTableSeeder</span>
-<span class="hljs-comment"># Seeded: ArticlesTableSeeder</span></code></pre>
-<h3 id="114-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC;-&#xC2DC;&#xB529;"><a name="114-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC;-&#xC2DC;&#xB529;" class="plugin-anchor" href="#114-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC;-&#xC2DC;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>11.4. &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC; &#xC2DC;&#xB529;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-6 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC; &#xC2DC;&#xB529; &#xD55C;&#xBC88;&#xC5D0; &#xC2E4;&#xD589;&#xD558;&#xAE30;</span>
+<span class="hljs-comment"># Seeded: ArticlesTableSeeder</span>
+</code></pre>
+<h3 id="114-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC;-&#xC2DC;&#xB529;"><a name="114-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC;-&#xC2DC;&#xB529;" class="plugin-anchor" href="#114-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC;-&#xC2DC;&#xB529;"><i class="fa fa-link" aria-hidden="true"></i></a>11.4. &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC; &#xC2DC;&#xB529;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 11-6 &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xACFC; &#xC2DC;&#xB529; &#xD55C;&#xBC88;&#xC5D0; &#xC2E4;&#xD589;&#xD558;&#xAE30;</span>
 
-$ php artisan migrate:refresh --seed</code></pre>
-<h3 id="115-&#xB9C8;&#xCE58;&#xBA70;"><a name="115-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#115-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>11.5. &#xB9C8;&#xCE58;&#xBA70;</h3><pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC2DC;&#xB529;&apos;</span>
-$ git tag 1011-seeding</code></pre>
+$ php artisan migrate:refresh --seed
+</code></pre>
+<h3 id="115-&#xB9C8;&#xCE58;&#xBA70;"><a name="115-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#115-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>11.5. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC2DC;&#xB529;&apos;</span>
+$ git tag 1011-seeding
+</code></pre>
 
                                 
                                 </section>
@@ -1068,7 +1089,7 @@ $ git tag 1011-seeding</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"11장 데이터베이스 시딩","level":"1.4.11","depth":2,"next":{"title":"12장 즉시로드와 페이징","level":"1.4.12","depth":2,"path":"draft/1012-eagerloading-pagination.md","ref":"draft/1012-eagerloading-pagination.md","articles":[]},"previous":{"title":"10장 엘로퀀트 ORM","level":"1.4.10","depth":2,"path":"draft/1010-eloquent.md","ref":"draft/1010-eloquent.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1011-seeding.md","mtime":"2016-07-04T13:17:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"11장 데이터베이스 시딩","level":"1.4.11","depth":2,"next":{"title":"12장 즉시로드와 페이징","level":"1.4.12","depth":2,"path":"draft/1012-eagerloading-pagination.md","ref":"draft/1012-eagerloading-pagination.md","articles":[]},"previous":{"title":"10장 엘로퀀트 ORM","level":"1.4.10","depth":2,"path":"draft/1010-eloquent.md","ref":"draft/1010-eloquent.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1011-seeding.md","mtime":"2016-07-04T13:17:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>15장 예외 처리와 디버깅 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>15장 예외 처리와 디버깅 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,15 +912,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="15&#xC7A5;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xC640;-&#xB514;&#xBC84;&#xAE45;"><a name="15&#xC7A5;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xC640;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#15&#xC7A5;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xC640;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15&#xC7A5; &#xC608;&#xC678; &#xCC98;&#xB9AC;&#xC640; &#xB514;&#xBC84;&#xAE45;</h2><h3 id="151-&#xC804;&#xC5ED;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xAE30;"><a name="151-&#xC804;&#xC5ED;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xAE30;" class="plugin-anchor" href="#151-&#xC804;&#xC5ED;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>15.1. &#xC804;&#xC5ED; &#xC608;&#xC678; &#xCC98;&#xB9AC;&#xAE30;</h3><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-1 app/Http/Controllers/ArticlesController.php</span>
+                                <h2 id="15&#xC7A5;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xC640;-&#xB514;&#xBC84;&#xAE45;"><a name="15&#xC7A5;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xC640;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#15&#xC7A5;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xC640;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15&#xC7A5; &#xC608;&#xC678; &#xCC98;&#xB9AC;&#xC640; &#xB514;&#xBC84;&#xAE45;</h2>
+<h3 id="151-&#xC804;&#xC5ED;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xAE30;"><a name="151-&#xC804;&#xC5ED;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xAE30;" class="plugin-anchor" href="#151-&#xC804;&#xC5ED;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;&#xAE30;"><i class="fa fa-link" aria-hidden="true"></i></a>15.1. &#xC804;&#xC5ED; &#xC608;&#xC678; &#xCC98;&#xB9AC;&#xAE30;</h3>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-1 app/Http/Controllers/ArticlesController.php</span>
 
 <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span><span class="hljs-params">($id)</span>
 </span>{
     <span class="hljs-keyword">echo</span> $foo;
 
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">&apos;&#xC740;(&#xB294;) &#xB2E4;&#xC74C; &#xAE30;&#xBCF8;&#xD0A4;&#xB97C; &#xAC00;&#xC9C4; Article &#xBAA8;&#xB378;&#xC744; &#xC870;&#xD68C;&#xD569;&#xB2C8;&#xB2E4;.:&apos;</span> . $id;
-}</code></pre>
-<p><img src="images/15-1.png"></p><p>&#xADF8;&#xB9BC; 15-1 &#xB77C;&#xB77C;&#xBCA8;&#xC758; &#xC5ED;&#xCD94;&#xC801; &#xB85C;&#xADF8;</p><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-2 app/Exceptions/Handler.php</span>
+}
+</code></pre>
+<p><img src="images/15-1.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 15-1 &#xB77C;&#xB77C;&#xBCA8;&#xC758; &#xC5ED;&#xCD94;&#xC801; &#xB85C;&#xADF8;</p>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-2 app/Exceptions/Handler.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Handler</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ExceptionHandler</span>
 </span>{
@@ -935,15 +940,18 @@
     </span>{
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">parent</span>::render($request, $e);
     }
-}</code></pre>
-<h3 id="152-&#xC2E4;&#xC6A9;&#xC801;&#xC778;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;"><a name="152-&#xC2E4;&#xC6A9;&#xC801;&#xC778;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;" class="plugin-anchor" href="#152-&#xC2E4;&#xC6A9;&#xC801;&#xC778;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>15.2. &#xC2E4;&#xC6A9;&#xC801;&#xC778; &#xC608;&#xC678; &#xCC98;&#xB9AC;</h3><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-3 app/Http/Controllers/ArticlesController.php</span>
+}
+</code></pre>
+<h3 id="152-&#xC2E4;&#xC6A9;&#xC801;&#xC778;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;"><a name="152-&#xC2E4;&#xC6A9;&#xC801;&#xC778;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;" class="plugin-anchor" href="#152-&#xC2E4;&#xC6A9;&#xC801;&#xC778;-&#xC608;&#xC678;-&#xCC98;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>15.2. &#xC2E4;&#xC6A9;&#xC801;&#xC778; &#xC608;&#xC678; &#xCC98;&#xB9AC;</h3>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-3 app/Http/Controllers/ArticlesController.php</span>
 
 <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span><span class="hljs-params">($id)</span>
 </span>{
     $article = \App\Article::findOrFail($id);
 
     <span class="hljs-keyword">return</span> $article-&gt;toArray();
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-4 app/Exceptions/Handler.php</span>
 
 <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span><span class="hljs-params">($request, Exception $e)</span>
@@ -958,7 +966,8 @@
     }
 
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">parent</span>::render($request, $e);
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- // &#xCF54;&#xB4DC; 15-5 resources/views/errors/notice.blade.php --&gt;</span>
 
 <span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
@@ -983,18 +992,27 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{{ $title }}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ $description }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 15-5 .env</span>
 
-APP_ENV=production</code></pre>
-<p><img src="images/15-2.png"></p><p>&#xADF8;&#xB9BC; 15-2 &#xC6B4;&#xC601; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xBCF4;&#xAC8C; &#xB420; &#xC624;&#xB958; &#xBA54;&#xC2DC;&#xC9C0;</p><h3 id="153-&#xB514;&#xBC84;&#xAE45;"><a name="153-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#153-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.3. &#xB514;&#xBC84;&#xAE45;</h3><h4 id="1531-&#xBC84;&#xADF8;&#xB780;"><a name="1531-&#xBC84;&#xADF8;&#xB780;" class="plugin-anchor" href="#1531-&#xBC84;&#xADF8;&#xB780;"><i class="fa fa-link" aria-hidden="true"></i></a>15.3.1. &#xBC84;&#xADF8;&#xB780;?</h4><h3 id="154-&#xB514;&#xBC84;&#xAE45;-&#xBC29;&#xBC95;"><a name="154-&#xB514;&#xBC84;&#xAE45;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#154-&#xB514;&#xBC84;&#xAE45;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4. &#xB514;&#xBC84;&#xAE45; &#xBC29;&#xBC95;</h3><h4 id="1541-dd-&#xB3C4;&#xC6B0;&#xBBF8;-&#xD568;&#xC218;"><a name="1541-dd-&#xB3C4;&#xC6B0;&#xBBF8;-&#xD568;&#xC218;" class="plugin-anchor" href="#1541-dd-&#xB3C4;&#xC6B0;&#xBBF8;-&#xD568;&#xC218;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.1. dd() &#xB3C4;&#xC6B0;&#xBBF8; &#xD568;&#xC218;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-6 app/Http/Controllers/ArticlesController.php</span>
+APP_ENV=production
+</code></pre>
+<p><img src="images/15-2.png" alt=""></p>
+<p>&#xADF8;&#xB9BC; 15-2 &#xC6B4;&#xC601; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xBCF4;&#xAC8C; &#xB420; &#xC624;&#xB958; &#xBA54;&#xC2DC;&#xC9C0;</p>
+<h3 id="153-&#xB514;&#xBC84;&#xAE45;"><a name="153-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#153-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.3. &#xB514;&#xBC84;&#xAE45;</h3>
+<h4 id="1531-&#xBC84;&#xADF8;&#xB780;"><a name="1531-&#xBC84;&#xADF8;&#xB780;" class="plugin-anchor" href="#1531-&#xBC84;&#xADF8;&#xB780;"><i class="fa fa-link" aria-hidden="true"></i></a>15.3.1. &#xBC84;&#xADF8;&#xB780;?</h4>
+<h3 id="154-&#xB514;&#xBC84;&#xAE45;-&#xBC29;&#xBC95;"><a name="154-&#xB514;&#xBC84;&#xAE45;-&#xBC29;&#xBC95;" class="plugin-anchor" href="#154-&#xB514;&#xBC84;&#xAE45;-&#xBC29;&#xBC95;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4. &#xB514;&#xBC84;&#xAE45; &#xBC29;&#xBC95;</h3>
+<h4 id="1541-dd-&#xB3C4;&#xC6B0;&#xBBF8;-&#xD568;&#xC218;"><a name="1541-dd-&#xB3C4;&#xC6B0;&#xBBF8;-&#xD568;&#xC218;" class="plugin-anchor" href="#1541-dd-&#xB3C4;&#xC6B0;&#xBBF8;-&#xD568;&#xC218;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.1. dd() &#xB3C4;&#xC6B0;&#xBBF8; &#xD568;&#xC218;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-6 app/Http/Controllers/ArticlesController.php</span>
 
 <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span><span class="hljs-params">($id)</span>
 </span>{
     $article = \App\Article::findOrFail($id);
     dd($article);
     <span class="hljs-keyword">return</span> $article-&gt;toArray();
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># HTTP 15-1 dd() &#xB3C4;&#xC6B0;&#xBBF8; &#xD568;&#xC218;&#xC758; &#xBC18;&#xD658;&#xAC12;</span>
 
 GET /articles/1 HTTP/1.1
@@ -1005,29 +1023,38 @@ Host: &#xD638;&#xC2A4;&#xD2B8;:&#xD3EC;&#xD2B8;
 <span class="hljs-comment">#   # ...</span>
 <span class="hljs-comment">#   #attributes: array:6 [&#x25B6;]</span>
 <span class="hljs-comment">#   # ...</span>
-<span class="hljs-comment"># }</span></code></pre>
-<h4 id="1542-&#xBDF0;-&#xB514;&#xBC84;&#xAE45;"><a name="1542-&#xBDF0;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#1542-&#xBDF0;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.2. &#xBDF0; &#xB514;&#xBC84;&#xAE45;</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-7 app/Http/Controllers/ArticlesController.php</span>
+<span class="hljs-comment"># }</span>
+</code></pre>
+<h4 id="1542-&#xBDF0;-&#xB514;&#xBC84;&#xAE45;"><a name="1542-&#xBDF0;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#1542-&#xBDF0;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.2. &#xBDF0; &#xB514;&#xBC84;&#xAE45;</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 15-7 app/Http/Controllers/ArticlesController.php</span>
 
 <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">index</span><span class="hljs-params">()</span>
 </span>{
     $articles = \App\Article::latest()-&gt;paginate(<span class="hljs-number">3</span>);
     dd(view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>))-&gt;render());
     <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;articles.index&apos;</span>, compact(<span class="hljs-string">&apos;articles&apos;</span>));
-}</code></pre>
-<h4 id="1543-&#xCFFC;&#xB9AC;-&#xB514;&#xBC84;&#xAE45;"><a name="1543-&#xCFFC;&#xB9AC;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#1543-&#xCFFC;&#xB9AC;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.3. &#xCFFC;&#xB9AC; &#xB514;&#xBC84;&#xAE45;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 15-1 toSql()</span>
+}
+</code></pre>
+<h4 id="1543-&#xCFFC;&#xB9AC;-&#xB514;&#xBC84;&#xAE45;"><a name="1543-&#xCFFC;&#xB9AC;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#1543-&#xCFFC;&#xB9AC;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.3. &#xCFFC;&#xB9AC; &#xB514;&#xBC84;&#xAE45;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 15-1 toSql()</span>
 
 $ php artisan tinker
 &gt;&gt;&gt; <span class="hljs-variable">$queryLoyalUsers</span> = App\User::<span class="hljs-built_in">where</span>(
     <span class="hljs-string">&apos;last_login&apos;</span>, <span class="hljs-string">&apos;&gt;&apos;</span>, Carbon\Carbon::now()-&gt;subMonth()
 )-&gt;toSql();
-=&gt; <span class="hljs-string">&quot;select * from `users` where `last_login` &gt; ?&quot;</span></code></pre>
-<h4 id="1544-&#xCF58;&#xC194;-&#xB514;&#xBC84;&#xAE45;"><a name="1544-&#xCF58;&#xC194;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#1544-&#xCF58;&#xC194;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.4. &#xCF58;&#xC194; &#xB514;&#xBC84;&#xAE45;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 15-2 &#xC544;&#xD2F0;&#xC98C; &#xC624;&#xB958;</span>
+=&gt; <span class="hljs-string">&quot;select * from `users` where `last_login` &gt; ?&quot;</span>
+</code></pre>
+<h4 id="1544-&#xCF58;&#xC194;-&#xB514;&#xBC84;&#xAE45;"><a name="1544-&#xCF58;&#xC194;-&#xB514;&#xBC84;&#xAE45;" class="plugin-anchor" href="#1544-&#xCF58;&#xC194;-&#xB514;&#xBC84;&#xAE45;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.4. &#xCF58;&#xC194; &#xB514;&#xBC84;&#xAE45;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 15-2 &#xC544;&#xD2F0;&#xC98C; &#xC624;&#xB958;</span>
 
 $ php artisan migrate
-<span class="hljs-comment"># Fatal error: Call to undefined method Illuminate\Database\Schema\Blueprint::password()</span></code></pre>
-<h4 id="1544-&#xC678;&#xBD80;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xC774;&#xC6A9;"><a name="1544-&#xC678;&#xBD80;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xC774;&#xC6A9;" class="plugin-anchor" href="#1544-&#xC678;&#xBD80;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xC774;&#xC6A9;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.4. &#xC678;&#xBD80; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC774;&#xC6A9;</h4><h3 id="155-&#xB9C8;&#xCE58;&#xBA70;"><a name="155-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#155-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>15.5. &#xB9C8;&#xCE58;&#xBA70;</h3><pre><code>$ git commit -m &apos;&#xC608;&#xC678; &#xCC98;&#xB9AC;&#xC640; &#xB514;&#xBC84;&#xAE45;&apos;
-$ git tag 1015-exception-debugging</code></pre>
-
+<span class="hljs-comment"># Fatal error: Call to undefined method Illuminate\Database\Schema\Blueprint::password()</span>
+</code></pre>
+<h4 id="1544-&#xC678;&#xBD80;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xC774;&#xC6A9;"><a name="1544-&#xC678;&#xBD80;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xC774;&#xC6A9;" class="plugin-anchor" href="#1544-&#xC678;&#xBD80;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xC774;&#xC6A9;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4.4. &#xC678;&#xBD80; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC774;&#xC6A9;</h4>
+<h3 id="155-&#xB9C8;&#xCE58;&#xBA70;"><a name="155-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#155-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>15.5. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code>$ git commit -m &apos;&#xC608;&#xC678; &#xCC98;&#xB9AC;&#xC640; &#xB514;&#xBC84;&#xAE45;&apos;
+$ git tag 1015-exception-debugging
+</code></pre>
                                 
                                 </section>
                             
@@ -1070,7 +1097,7 @@ $ git tag 1015-exception-debugging</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"15장 예외 처리와 디버깅","level":"1.4.15","depth":2,"next":{"title":"16장 이메일 보내기","level":"1.4.16","depth":2,"path":"draft/1016-email.md","ref":"draft/1016-email.md","articles":[]},"previous":{"title":"14장 이벤트 시스템","level":"1.4.14","depth":2,"path":"draft/1014-event.md","ref":"draft/1014-event.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1015-exception-debugging.md","mtime":"2016-07-04T13:20:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"15장 예외 처리와 디버깅","level":"1.4.15","depth":2,"next":{"title":"16장 이메일 보내기","level":"1.4.16","depth":2,"path":"draft/1016-email.md","ref":"draft/1016-email.md","articles":[]},"previous":{"title":"14장 이벤트 시스템","level":"1.4.14","depth":2,"path":"draft/1014-event.md","ref":"draft/1014-event.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1015-exception-debugging.md","mtime":"2016-07-04T13:20:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

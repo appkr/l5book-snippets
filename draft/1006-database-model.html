@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>6장 데이터베이스와 모델 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6장 데이터베이스와 모델 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -912,12 +912,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="6&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640;-&#xBAA8;&#xB378;"><a name="6&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640;-&#xBAA8;&#xB378;" class="plugin-anchor" href="#6&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640;-&#xBAA8;&#xB378;"><i class="fa fa-link" aria-hidden="true"></i></a>6&#xC7A5; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640; &#xBAA8;&#xB378;</h2><h3 id="61-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC900;&#xBE44;"><a name="61-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC900;&#xBE44;" class="plugin-anchor" href="#61-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC900;&#xBE44;"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC900;&#xBE44;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-1 MySQL &#xC811;&#xC18D; (&#xAD00;&#xB9AC;&#xC790; &#xACC4;&#xC815;)</span>
+                                <h2 id="6&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640;-&#xBAA8;&#xB378;"><a name="6&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640;-&#xBAA8;&#xB378;" class="plugin-anchor" href="#6&#xC7A5;-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640;-&#xBAA8;&#xB378;"><i class="fa fa-link" aria-hidden="true"></i></a>6&#xC7A5; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640; &#xBAA8;&#xB378;</h2>
+<h3 id="61-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC900;&#xBE44;"><a name="61-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC900;&#xBE44;" class="plugin-anchor" href="#61-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC900;&#xBE44;"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC900;&#xBE44;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-1 MySQL &#xC811;&#xC18D; (&#xAD00;&#xB9AC;&#xC790; &#xACC4;&#xC815;)</span>
 
 $ mysql -uroot -p
 <span class="hljs-comment"># Enter password: secret</span>
 
-mysql&gt;</code></pre>
+mysql&gt;
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-2 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 mysql&gt; CREATE DATABASE myapp;
@@ -935,13 +938,15 @@ mysql&gt; FLUSH PRIVILEGES;
 mysql&gt; quit
 <span class="hljs-comment"># Bye</span>
 
-$</code></pre>
+$
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-3 MySQL &#xC811;&#xC18D; (&#xC0AC;&#xC6A9;&#xC790; &#xACC4;&#xC815;)</span>
 
 $ mysql -uhomestead -p
 <span class="hljs-comment"># Enter password: secret</span>
 
-mysql&gt;</code></pre>
+mysql&gt;
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-4 &#xD14C;&#xC774;&#xBE14; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 mysql&gt; use myapp;
@@ -962,39 +967,49 @@ mysql&gt; describe posts;
 <span class="hljs-comment"># | title | varchar(255)     | YES  |     | NULL    |                |</span>
 <span class="hljs-comment"># | body  | text             | YES  |     | NULL    |                |</span>
 <span class="hljs-comment"># +-------+------------------+------+-----+---------+----------------+</span>
-<span class="hljs-comment"># 3 rows in set (0.01 sec)</span></code></pre>
-<h3 id="62-repl"><a name="62-repl" class="plugin-anchor" href="#62-repl"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. REPL</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-5 &#xD305;&#xCEE4;(REPL) &#xCF58;&#xC194;</span>
+<span class="hljs-comment"># 3 rows in set (0.01 sec)</span>
+</code></pre>
+<h3 id="62-repl"><a name="62-repl" class="plugin-anchor" href="#62-repl"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. REPL</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-5 &#xD305;&#xCEE4;(REPL) &#xCF58;&#xC194;</span>
 
 $ php artisan tinker
 <span class="hljs-comment"># Psy Shell v0.6.1 (PHP 7.0.3 &#x2014; cli) by Justin Hileman</span>
 
-&gt;&gt;&gt;</code></pre>
-<h3 id="63-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xCFFC;&#xB9AC;"><a name="63-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xCFFC;&#xB9AC;" class="plugin-anchor" href="#63-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xCFFC;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3. &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xCFFC;&#xB9AC;</h3><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-6 QueryException</span>
+&gt;&gt;&gt;
+</code></pre>
+<h3 id="63-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xCFFC;&#xB9AC;"><a name="63-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xCFFC;&#xB9AC;" class="plugin-anchor" href="#63-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xCFFC;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3. &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xCFFC;&#xB9AC;</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-6 QueryException</span>
 
 $ php artisan tinker
 
 &gt;&gt;&gt; DB::select(<span class="hljs-string">&apos;SELECT * FROM posts&apos;</span>);
-<span class="hljs-comment"># Illuminate\Database\QueryException with message &apos;SQLSTATE[42S02]: Base table or view not found: 1146 Table &apos;homestead.posts&apos; doesn&apos;t exist (SQL: SELECT * FROM posts)&apos;</span></code></pre>
+<span class="hljs-comment"># Illuminate\Database\QueryException with message &apos;SQLSTATE[42S02]: Base table or view not found: 1146 Table &apos;homestead.posts&apos; doesn&apos;t exist (SQL: SELECT * FROM posts)&apos;</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF54;&#xB4DC; 6-1 .env</span>
 
 DB_HOST=127.0.0.1
 DB_DATABASE=myapp
 DB_USERNAME=homestead
-DB_PASSWORD=secret</code></pre>
+DB_PASSWORD=secret
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-7 &#xD305;&#xCEE4; &#xCF58;&#xC194;&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xCFFC;&#xB9AC;</span>
 
 $ php artisan tinker
 
 &gt;&gt;&gt; DB::select(<span class="hljs-string">&apos;SELECT * FROM posts&apos;</span>);
-<span class="hljs-comment"># =&gt; []</span></code></pre>
-<h4 id="631-&#xB370;&#xC774;&#xD130;-&#xC0BD;&#xC785;"><a name="631-&#xB370;&#xC774;&#xD130;-&#xC0BD;&#xC785;" class="plugin-anchor" href="#631-&#xB370;&#xC774;&#xD130;-&#xC0BD;&#xC785;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3.1. &#xB370;&#xC774;&#xD130; &#xC0BD;&#xC785;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-8 &#xD305;&#xCEE4; &#xCF58;&#xC194;&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB808;&#xCF54;&#xB4DC; &#xC0BD;&#xC785;</span>
+<span class="hljs-comment"># =&gt; []</span>
+</code></pre>
+<h4 id="631-&#xB370;&#xC774;&#xD130;-&#xC0BD;&#xC785;"><a name="631-&#xB370;&#xC774;&#xD130;-&#xC0BD;&#xC785;" class="plugin-anchor" href="#631-&#xB370;&#xC774;&#xD130;-&#xC0BD;&#xC785;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3.1. &#xB370;&#xC774;&#xD130; &#xC0BD;&#xC785;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-8 &#xD305;&#xCEE4; &#xCF58;&#xC194;&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB808;&#xCF54;&#xB4DC; &#xC0BD;&#xC785;</span>
 
 &gt;&gt;&gt; DB::insert(<span class="hljs-string">&apos;INSERT INTO posts(title, body) VALUES(?, ?)&apos;</span>, [<span class="hljs-string">&apos;Hello Database&apos;</span>, <span class="hljs-string">&apos;Greetings from tinker&apos;</span>]);
 <span class="hljs-comment"># =&gt; true</span>
 
 &gt;&gt;&gt; DB::insert(<span class="hljs-string">&apos;INSERT INTO posts(title, body) VALUES(?, ?)&apos;</span>, [<span class="hljs-string">&apos;Ola Database&apos;</span>, <span class="hljs-string">&apos;Saludos de tinker&apos;</span>]);
-<span class="hljs-comment"># =&gt; true</span></code></pre>
-<h4 id="632-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><a name="632-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;" class="plugin-anchor" href="#632-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3.2. &#xB370;&#xC774;&#xD130; &#xC870;&#xD68C;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-9 &#xCEEC;&#xB809;&#xC158; &#xCFFC;&#xB9AC;</span>
+<span class="hljs-comment"># =&gt; true</span>
+</code></pre>
+<h4 id="632-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><a name="632-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;" class="plugin-anchor" href="#632-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3.2. &#xB370;&#xC774;&#xD130; &#xC870;&#xD68C;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-9 &#xCEEC;&#xB809;&#xC158; &#xCFFC;&#xB9AC;</span>
 
 &gt;&gt;&gt; <span class="hljs-variable">$posts</span> = DB::select(<span class="hljs-string">&apos;SELECT * FROM posts&apos;</span>);
 <span class="hljs-comment"># =&gt; [</span>
@@ -1008,11 +1023,13 @@ $ php artisan tinker
 <span class="hljs-comment">#        +&quot;title&quot;: &quot;Ola Database&quot;,</span>
 <span class="hljs-comment">#        +&quot;body&quot;: &quot;Saludos de tinker&quot;,</span>
 <span class="hljs-comment">#      },</span>
-<span class="hljs-comment">#    ]</span></code></pre>
+<span class="hljs-comment">#    ]</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-10 &#xD504;&#xB85C;&#xD37C;&#xD2F0; &#xC811;&#xADFC;</span>
 
 &gt;&gt;&gt; <span class="hljs-variable">$posts</span>[0]-&gt;title;
-<span class="hljs-comment"># =&gt; &quot;Hello Database&quot;</span></code></pre>
+<span class="hljs-comment"># =&gt; &quot;Hello Database&quot;</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-11 &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xCFFC;&#xB9AC;</span>
 
 &gt;&gt;&gt; <span class="hljs-variable">$post</span> = DB::selectOne(<span class="hljs-string">&apos;SELECT * FROM posts WHERE id = ?&apos;</span>, [1]);
@@ -1020,8 +1037,11 @@ $ php artisan tinker
 <span class="hljs-comment">#      +&quot;id&quot;: 1,</span>
 <span class="hljs-comment">#      +&quot;title&quot;: &quot;Hello Database&quot;,</span>
 <span class="hljs-comment">#      +&quot;body&quot;: &quot;Greetings from tinker&quot;,</span>
-<span class="hljs-comment">#    }</span></code></pre>
-<h3 id="64-&#xCFFC;&#xB9AC;-&#xBE4C;&#xB354;"><a name="64-&#xCFFC;&#xB9AC;-&#xBE4C;&#xB354;" class="plugin-anchor" href="#64-&#xCFFC;&#xB9AC;-&#xBE4C;&#xB354;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4. &#xCFFC;&#xB9AC; &#xBE4C;&#xB354;</h3><h4 id="641-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><a name="641-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;" class="plugin-anchor" href="#641-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.1. &#xB370;&#xC774;&#xD130; &#xC870;&#xD68C;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-12 get() &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xCEEC;&#xB809;&#xC158; &#xC870;&#xD68C;</span>
+<span class="hljs-comment">#    }</span>
+</code></pre>
+<h3 id="64-&#xCFFC;&#xB9AC;-&#xBE4C;&#xB354;"><a name="64-&#xCFFC;&#xB9AC;-&#xBE4C;&#xB354;" class="plugin-anchor" href="#64-&#xCFFC;&#xB9AC;-&#xBE4C;&#xB354;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4. &#xCFFC;&#xB9AC; &#xBE4C;&#xB354;</h3>
+<h4 id="641-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><a name="641-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;" class="plugin-anchor" href="#641-&#xB370;&#xC774;&#xD130;-&#xC870;&#xD68C;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.1. &#xB370;&#xC774;&#xD130; &#xC870;&#xD68C;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-12 get() &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xCEEC;&#xB809;&#xC158; &#xC870;&#xD68C;</span>
 
 &gt;&gt;&gt; DB::table(<span class="hljs-string">&apos;posts&apos;</span>)-&gt;get();
 <span class="hljs-comment"># =&gt; [</span>
@@ -1036,7 +1056,8 @@ $ php artisan tinker
 <span class="hljs-comment">#        +&quot;body&quot;: &quot;Saludos de tinker&quot;,</span>
 <span class="hljs-comment">#      },</span>
 <span class="hljs-comment">#    ]</span>
-<span class="hljs-comment"># &gt;&gt;&gt;</span></code></pre>
+<span class="hljs-comment"># &gt;&gt;&gt;</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-13 first(), find() &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC870;&#xD68C;</span>
 
 &gt;&gt;&gt; DB::table(<span class="hljs-string">&apos;posts&apos;</span>)-&gt;first();
@@ -1051,8 +1072,10 @@ $ php artisan tinker
 <span class="hljs-comment">#      +&quot;id&quot;: 2,</span>
 <span class="hljs-comment">#      +&quot;title&quot;: &quot;Ola Database&quot;,</span>
 <span class="hljs-comment">#      +&quot;body&quot;: &quot;Saludos de tinker&quot;,</span>
-<span class="hljs-comment">#    }</span></code></pre>
-<h4 id="642-&#xC870;&#xAC74;&#xC808;"><a name="642-&#xC870;&#xAC74;&#xC808;" class="plugin-anchor" href="#642-&#xC870;&#xAC74;&#xC808;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.2. &#xC870;&#xAC74;&#xC808;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-14 &#xC870;&#xAC74;&#xC808; &#xC774;&#xC6A9;</span>
+<span class="hljs-comment">#    }</span>
+</code></pre>
+<h4 id="642-&#xC870;&#xAC74;&#xC808;"><a name="642-&#xC870;&#xAC74;&#xC808;" class="plugin-anchor" href="#642-&#xC870;&#xAC74;&#xC808;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.2. &#xC870;&#xAC74;&#xC808;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-14 &#xC870;&#xAC74;&#xC808; &#xC774;&#xC6A9;</span>
 
 &gt;&gt;&gt; DB::table(<span class="hljs-string">&apos;posts&apos;</span>)-&gt;<span class="hljs-built_in">where</span>(<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;=&apos;</span>, 1)-&gt;get();
 &gt;&gt;&gt; DB::table(<span class="hljs-string">&apos;posts&apos;</span>)-&gt;<span class="hljs-built_in">where</span>(<span class="hljs-string">&apos;id&apos;</span>, 1)-&gt;get();
@@ -1064,8 +1087,12 @@ $ php artisan tinker
 <span class="hljs-comment">#        +&quot;title&quot;: &quot;Hello Database&quot;,</span>
 <span class="hljs-comment">#        +&quot;body&quot;: &quot;Greetings from tinker&quot;,</span>
 <span class="hljs-comment">#      },</span>
-<span class="hljs-comment">#    ]</span></code></pre>
-<h4 id="643-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;"><a name="643-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;" class="plugin-anchor" href="#643-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.3. &#xB2E4;&#xB978; &#xBA54;&#xC11C;&#xB4DC;</h4><h3 id="65-&#xC5D8;&#xB85C;&#xD000;&#xD2B8;-orm"><a name="65-&#xC5D8;&#xB85C;&#xD000;&#xD2B8;-orm" class="plugin-anchor" href="#65-&#xC5D8;&#xB85C;&#xD000;&#xD2B8;-orm"><i class="fa fa-link" aria-hidden="true"></i></a>6.5. &#xC5D8;&#xB85C;&#xD000;&#xD2B8; ORM</h3><h4 id="651-&#xBAA8;&#xB378;"><a name="651-&#xBAA8;&#xB378;" class="plugin-anchor" href="#651-&#xBAA8;&#xB378;"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.1. &#xBAA8;&#xB378;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-15 &#xD14C;&#xC2A4;&#xD2B8; &#xD14C;&#xC774;&#xBE14; &#xBC0F; &#xB370;&#xC774;&#xD130; &#xB9CC;&#xB4E4;&#xAE30;</span>
+<span class="hljs-comment">#    ]</span>
+</code></pre>
+<h4 id="643-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;"><a name="643-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;" class="plugin-anchor" href="#643-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.3. &#xB2E4;&#xB978; &#xBA54;&#xC11C;&#xB4DC;</h4>
+<h3 id="65-&#xC5D8;&#xB85C;&#xD000;&#xD2B8;-orm"><a name="65-&#xC5D8;&#xB85C;&#xD000;&#xD2B8;-orm" class="plugin-anchor" href="#65-&#xC5D8;&#xB85C;&#xD000;&#xD2B8;-orm"><i class="fa fa-link" aria-hidden="true"></i></a>6.5. &#xC5D8;&#xB85C;&#xD000;&#xD2B8; ORM</h3>
+<h4 id="651-&#xBAA8;&#xB378;"><a name="651-&#xBAA8;&#xB378;" class="plugin-anchor" href="#651-&#xBAA8;&#xB378;"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.1. &#xBAA8;&#xB378;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-15 &#xD14C;&#xC2A4;&#xD2B8; &#xD14C;&#xC774;&#xBE14; &#xBC0F; &#xB370;&#xC774;&#xD130; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 $ mysql -uhomestead -p
 
@@ -1097,14 +1124,16 @@ mysql&gt; SELECT * FROM authors;
 <span class="hljs-comment"># +----+------------------+----------+</span>
 <span class="hljs-comment"># |  1 | john@example.com | password |</span>
 <span class="hljs-comment"># +----+------------------+----------+</span>
-<span class="hljs-comment"># 1 row in set (0.01 sec)</span></code></pre>
+<span class="hljs-comment"># 1 row in set (0.01 sec)</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-16 &#xBAA8;&#xB378; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 $ php artisan make:model Post
 <span class="hljs-comment"># Model created successfully.</span>
 
 $ php artisan make:model Author
-<span class="hljs-comment"># Model created successfully.</span></code></pre>
+<span class="hljs-comment"># Model created successfully.</span>
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 6-2 app/Author.php</span>
 
 <span class="hljs-meta">&lt;?php</span>
@@ -1116,8 +1145,10 @@ $ php artisan make:model Author
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Author</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
     <span class="hljs-comment">//</span>
-}</code></pre>
-<h4 id="652-&#xBAA8;&#xB378;-&#xCFFC;&#xB9AC;"><a name="652-&#xBAA8;&#xB378;-&#xCFFC;&#xB9AC;" class="plugin-anchor" href="#652-&#xBAA8;&#xB378;-&#xCFFC;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.2. &#xBAA8;&#xB378; &#xCFFC;&#xB9AC;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-17 &#xC5D8;&#xB85C;&#xD000;&#xD2B8; &#xCFFC;&#xB9AC;</span>
+}
+</code></pre>
+<h4 id="652-&#xBAA8;&#xB378;-&#xCFFC;&#xB9AC;"><a name="652-&#xBAA8;&#xB378;-&#xCFFC;&#xB9AC;" class="plugin-anchor" href="#652-&#xBAA8;&#xB378;-&#xCFFC;&#xB9AC;"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.2. &#xBAA8;&#xB378; &#xCFFC;&#xB9AC;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-17 &#xC5D8;&#xB85C;&#xD000;&#xD2B8; &#xCFFC;&#xB9AC;</span>
 
 &gt;&gt;&gt; App\Author::get();
 <span class="hljs-comment"># =&gt; Illuminate\Database\Eloquent\Collection {#612</span>
@@ -1128,7 +1159,8 @@ $ php artisan make:model Author
 <span class="hljs-comment">#          password: &quot;password&quot;,</span>
 <span class="hljs-comment">#        },</span>
 <span class="hljs-comment">#      ],</span>
-<span class="hljs-comment">#    }</span></code></pre>
+<span class="hljs-comment">#    }</span>
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-18 &#xC5D8;&#xB85C;&#xD000;&#xD2B8;&#xB85C; &#xC0C8;&#xB85C;&#xC6B4; &#xB808;&#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30;</span>
 
 &gt;&gt;&gt; <span class="hljs-variable">$author</span> = new App\Author;
@@ -1138,41 +1170,50 @@ $ php artisan make:model Author
 &gt;&gt;&gt; <span class="hljs-variable">$author</span>-&gt;password = <span class="hljs-string">&apos;password&apos;</span>;
 <span class="hljs-comment"># =&gt; &quot;password&quot;</span>
 &gt;&gt;&gt; <span class="hljs-variable">$author</span>-&gt;save();
-<span class="hljs-comment"># Illuminate\Database\QueryException with message &apos;SQLSTATE[42S22]: Column not found: 1054 Unknown column &apos;updated_at&apos; in &apos;field list&apos; ...</span></code></pre>
-<h4 id="653-queryexception"><a name="653-queryexception" class="plugin-anchor" href="#653-queryexception"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.3. QueryException</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 6-3 app/Author.php</span>
+<span class="hljs-comment"># Illuminate\Database\QueryException with message &apos;SQLSTATE[42S22]: Column not found: 1054 Unknown column &apos;updated_at&apos; in &apos;field list&apos; ...</span>
+</code></pre>
+<h4 id="653-queryexception"><a name="653-queryexception" class="plugin-anchor" href="#653-queryexception"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.3. QueryException</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 6-3 app/Author.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Author</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
     <span class="hljs-keyword">public</span> $timestamps = <span class="hljs-keyword">false</span>;
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-19 &#xC5D8;&#xB85C;&#xD000;&#xD2B8;&#xB85C; &#xC0C8;&#xB85C;&#xC6B4; &#xB808;&#xCF54;&#xB4DC; &#xB9CC;&#xB4E4;&#xAE30; (&#xC7AC;&#xC2DC;&#xB3C4;)</span>
 
 <span class="hljs-comment"># ...</span>
 &gt;&gt;&gt; <span class="hljs-variable">$author</span>-&gt;save();
 <span class="hljs-comment"># =&gt; true</span>
 &gt;&gt;&gt; App\Author::get();
-<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span></code></pre>
-<h4 id="654-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;&#xB85C;-&#xB370;&#xC774;&#xD130;-&#xC800;&#xC7A5;"><a name="654-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;&#xB85C;-&#xB370;&#xC774;&#xD130;-&#xC800;&#xC7A5;" class="plugin-anchor" href="#654-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;&#xB85C;-&#xB370;&#xC774;&#xD130;-&#xC800;&#xC7A5;"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.4. &#xB2E4;&#xB978; &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xB370;&#xC774;&#xD130; &#xC800;&#xC7A5;</h4><pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-20 &#xB300;&#xB7C9; &#xD560;&#xB2F9;</span>
+<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span>
+</code></pre>
+<h4 id="654-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;&#xB85C;-&#xB370;&#xC774;&#xD130;-&#xC800;&#xC7A5;"><a name="654-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;&#xB85C;-&#xB370;&#xC774;&#xD130;-&#xC800;&#xC7A5;" class="plugin-anchor" href="#654-&#xB2E4;&#xB978;-&#xBA54;&#xC11C;&#xB4DC;&#xB85C;-&#xB370;&#xC774;&#xD130;-&#xC800;&#xC7A5;"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.4. &#xB2E4;&#xB978; &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xB370;&#xC774;&#xD130; &#xC800;&#xC7A5;</h4>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-20 &#xB300;&#xB7C9; &#xD560;&#xB2F9;</span>
 
 &gt;&gt;&gt; App\Author::create([
 <span class="hljs-string">&apos;email&apos;</span> =&gt; <span class="hljs-string">&apos;bar@baz.com&apos;</span>,
 <span class="hljs-string">&apos;password&apos;</span> =&gt; bcrypt(<span class="hljs-string">&apos;password&apos;</span>),
 ]);
-<span class="hljs-comment"># Illuminate\Database\Eloquent\MassAssignmentException with message &apos;email&apos;</span></code></pre>
-<h4 id="655-massassignmentexception"><a name="655-massassignmentexception" class="plugin-anchor" href="#655-massassignmentexception"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.5. MassAssignmentException</h4><pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 6-4 app/Author.php</span>
+<span class="hljs-comment"># Illuminate\Database\Eloquent\MassAssignmentException with message &apos;email&apos;</span>
+</code></pre>
+<h4 id="655-massassignmentexception"><a name="655-massassignmentexception" class="plugin-anchor" href="#655-massassignmentexception"><i class="fa fa-link" aria-hidden="true"></i></a>6.5.5. MassAssignmentException</h4>
+<pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 6-4 app/Author.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Author</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
     <span class="hljs-keyword">public</span> $timestamps = <span class="hljs-keyword">false</span>;
     <span class="hljs-keyword">protected</span> $fillable = [<span class="hljs-string">&apos;email&apos;</span>, <span class="hljs-string">&apos;password&apos;</span>];
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-php"><span class="hljs-comment">// &#xCF54;&#xB4DC; 6-5 app/Post.php</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Post</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
     <span class="hljs-keyword">public</span> $timestamps = <span class="hljs-keyword">false</span>;
     <span class="hljs-keyword">protected</span> $fillable = [<span class="hljs-string">&apos;email&apos;</span>, <span class="hljs-string">&apos;password&apos;</span>];
-}</code></pre>
+}
+</code></pre>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#xCF58;&#xC194; 6-21 &#xB300;&#xB7C9; &#xD560;&#xB2F9; (&#xC7AC;&#xC2DC;&#xB3C4;)</span>
 &gt;&gt;&gt; App\Author::create([
 <span class="hljs-string">&apos;email&apos;</span> =&gt; <span class="hljs-string">&apos;bar@baz.com&apos;</span>,
@@ -1184,9 +1225,12 @@ $ php artisan make:model Author
 <span class="hljs-comment">#      id: 3,</span>
 <span class="hljs-comment">#    }</span>
 &gt;&gt;&gt; App\Author::get();
-<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span></code></pre>
-<h3 id="66-&#xB9C8;&#xCE58;&#xBA70;"><a name="66-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#66-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>6.6. &#xB9C8;&#xCE58;&#xBA70;</h3><pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640; &#xBAA8;&#xB378;&apos;</span>
-$ git tag 1006-database-model</code></pre>
+<span class="hljs-comment"># &#xCD9C;&#xB825; &#xACB0;&#xACFC; &#xC0DD;&#xB7B5;</span>
+</code></pre>
+<h3 id="66-&#xB9C8;&#xCE58;&#xBA70;"><a name="66-&#xB9C8;&#xCE58;&#xBA70;" class="plugin-anchor" href="#66-&#xB9C8;&#xCE58;&#xBA70;"><i class="fa fa-link" aria-hidden="true"></i></a>6.6. &#xB9C8;&#xCE58;&#xBA70;</h3>
+<pre><code class="lang-sh">$ git commit -m <span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640; &#xBAA8;&#xB378;&apos;</span>
+$ git tag 1006-database-model
+</code></pre>
 
                                 
                                 </section>
@@ -1230,7 +1274,7 @@ $ git tag 1006-database-model</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6장 데이터베이스와 모델","level":"1.4.6","depth":2,"next":{"title":"7장 데이터베이스 마이그레이션","level":"1.4.7","depth":2,"path":"draft/1007-database-migrations.md","ref":"draft/1007-database-migrations.md","articles":[]},"previous":{"title":"5장 블레이드","level":"1.4.5","depth":2,"path":"draft/1005-blade.md","ref":"draft/1005-blade.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1006-database-model.md","mtime":"2016-07-28T09:43:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T00:44:24.271Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6장 데이터베이스와 모델","level":"1.4.6","depth":2,"next":{"title":"7장 데이터베이스 마이그레이션","level":"1.4.7","depth":2,"path":"draft/1007-database-migrations.md","ref":"draft/1007-database-migrations.md","articles":[]},"previous":{"title":"5장 블레이드","level":"1.4.5","depth":2,"path":"draft/1005-blade.md","ref":"draft/1005-blade.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","richquotes","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-80296339-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":10,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"draft/1006-database-model.md","mtime":"2016-07-28T09:43:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-24T01:41:21.434Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
